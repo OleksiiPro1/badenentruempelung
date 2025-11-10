@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const PRIMARY = "#2B3A42";
 const SECONDARY = "#A7A9AC";
-const ACCENT = "#7A5C3A";
+const ACCENT = "#CBB47B";
 const BG = "#FAFAFA";
 const BG_SOFT = "#E7EBEE";
 const DARK = "#1E262B";

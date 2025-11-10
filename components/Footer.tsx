@@ -20,7 +20,7 @@ const SECONDARY = "#A7A9AC";
 const ACCENT = "#CBB47B";
 const BG = "#FAFAFA";
 const BG_SOFT = "#E7EBEE";
-const BROWN = "#7A5C3A";
+const BROWN = "#CBB47B";
 
 const EMAIL = "info@badenentruempelung.at";
 const PHONE_DISPLAY = "+43 676 720 26 23";

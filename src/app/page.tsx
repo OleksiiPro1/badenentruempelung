@@ -27,7 +27,7 @@ export default function HomePage() {
             className="object-cover object-center opacity-40"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2B3A42]/70 via-[#2B3A42]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2B3A42]/80 via-[#2B3A42]/50 to-transparent" />
         </div>
 
         {/* Контент */}
@@ -47,7 +47,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="https://wa.me/436767202623"
-                className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-medium text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+                className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-medium text-white shadow-md transition hover:shadow-lg hover:brightness-110"
               >
                 WhatsApp Kontakt
               </Link>
@@ -128,6 +128,164 @@ export default function HomePage() {
         {/* Декоративная нижняя линия */}
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FDFBF9] to-transparent" />
       </section>
+
+
+      {/* ===== SEKTION 11: Referenz – Wüstegasse 50, Baden (Vorher/Nachher) ===== */}
+<section
+  id="referenz-wuestegasse-50"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+  aria-label="Referenz – Wüstegasse 50, Baden"
+>
+  {/* Dekor */}
+  <div
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
+      backgroundImage: `
+        radial-gradient(60rem 30rem at 0% 10%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(60rem 30rem at 100% 90%, #E7EBEE33 0%, transparent 60%)
+      `,
+    }}
+  />
+
+  <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+    <header className="mb-8 md:mb-10">
+      <div className="inline-flex items-center gap-3 rounded-full border border-[#E8E1D9] bg-white px-4 py-2 text-sm text-[#2B3A42] shadow-[0_4px_14px_rgba(0,0,0,0.05)]">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+        <span className="font-medium">Wüstegasse 50, Baden</span>
+      </div>
+      <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Vorher / Nachher – Fallbeispiel aus Baden
+      </h2>
+      <p className="mt-3 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Ein klar strukturiertes Projekt mit schneller Umsetzung und besenreiner Übergabe.
+        Fixpreis nach Besichtigung, termintreue Durchführung und respektvolle Abwicklung vor Ort.
+      </p>
+    </header>
+
+    
+
+    {/* Bilder – zwei Karten, видимость управляется CSS по :checked */}
+    <div className="relative">
+      {/* Vorher */}
+      <figure
+        className="group pointer-events-auto rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)] overflow-hidden peer-checked/view-before:block hidden"
+      >
+        <div className="relative h-[260px] w-full md:h-[420px]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/cases/wuestegasse-50-before.webp"
+            alt="Wüstegasse 50 Baden – Vorher: derselbe Raum in Baden"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+          {/* Badge */}
+          <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[#2B3A42] px-3 py-1.5 text-xs font-semibold text-white">
+            <span>Baden • Vorher</span>
+          </div>
+        </div>
+        <figcaption className="p-6">
+          <h3 className="text-lg font-semibold text-[#2B3A42]">Vorher: derselbe Raum in Baden</h3>
+          <p className="mt-2 text-[15px] leading-relaxed text-[#334049]">
+            Aufnahme vor der Durchführung. Termin wurde kurzfristig fixiert, Besichtigung vorab inklusive.
+          </p>
+        </figcaption>
+      </figure>
+
+      {/* Nachher */}
+      <figure
+        className="group pointer-events-auto rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)] overflow-hidden peer-checked/view-after:block hidden"
+      >
+        <div className="relative h-[260px] w-full md:h-[420px]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/cases/wuestegasse-50-after.webp"
+            alt="Wüstegasse 50 Baden – Nachher: derselbe Raum in Baden"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+          {/* Badge */}
+          <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[#CBB47B] px-3 py-1.5 text-xs font-semibold text-[#2B3A42]">
+            <span>Baden • Nachher</span>
+          </div>
+        </div>
+        <figcaption className="p-6">
+          <h3 className="text-lg font-semibold text-[#2B3A42]">Nachher: Wüstegasse 50 Baden</h3>
+          <p className="mt-2 text-[15px] leading-relaxed text-[#334049]">
+            Übergabe besenrein, alles wie vereinbart. Fixpreis bestätigt, termingerecht abgeschlossen.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+
+    {/* Bilder – responsive: Mobil 1 Spalte, Desktop 2 Spalten */}
+<div className="grid gap-6 lg:grid-cols-2">
+  {/* Vorher (links auf Desktop, oben auf Mobile) */}
+  <figure className="rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)] overflow-hidden">
+    <div className="relative h-[260px] w-full md:h-[420px]">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/baden-vorher.jpeg" /* oder /images/cases/wuestegasse-50-before.webp */
+        alt="Wüstegasse 50 Baden – Vorher: derselbe Raum in Baden"
+        className="h-full w-full object-cover !h-full !w-full"
+        loading="lazy"
+      />
+      {/* Badge */}
+      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[#2B3A42] px-3 py-1.5 text-xs font-semibold text-white">
+        <span>Baden • Vorher</span>
+      </div>
+    </div>
+    <figcaption className="p-6">
+      <h3 className="text-lg font-semibold text-[#2B3A42]">Vorher: derselbe Raum in Baden</h3>
+      <p className="mt-2 text-[15px] leading-relaxed text-[#334049]">
+        Aufnahme vor der Durchführung. Termin wurde kurzfristig fixiert, Besichtigung vorab inklusive.
+      </p>
+    </figcaption>
+  </figure>
+
+  {/* Nachher (rechts auf Desktop, unten auf Mobile) */}
+  <figure className="rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)] overflow-hidden">
+    <div className="relative h-[260px] w-full md:h-[420px]">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/baden-nachher.jpeg" /* oder /images/cases/wuestegasse-50-after.webp */
+        alt="Wüstegasse 50 Baden – Nachher: derselbe Raum in Baden"
+        className="h-full w-full object-cover !h-full !w-full"
+        loading="lazy"
+      />
+      {/* Badge */}
+      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[#CBB47B] px-3 py-1.5 text-xs font-semibold text-[#2B3A42]">
+        <span>Baden • Nachher</span>
+      </div>
+    </div>
+    <figcaption className="p-6">
+      <h3 className="text-lg font-semibold text-[#2B3A42]">Nachher: Wüstegasse 50 Baden</h3>
+      <p className="mt-2 text-[15px] leading-relaxed text-[#334049]">
+        Übergabe besenrein, alles wie vereinbart. Fixpreis bestätigt, termingerecht abgeschlossen.
+      </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+    {/* CTA */}
+    <div className="mt-10 flex flex-wrap gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        Ähnliches Projekt anfragen
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
+    </div>
+  </div>
+</section>
+
 
       {/* ===== SEKTION 3: Leistungen – Entrümpelung Baden ===== */}
 <section
@@ -216,7 +374,7 @@ export default function HomePage() {
     <div className="mt-10 flex flex-wrap items-center gap-4">
       <a
         href="https://wa.me/436767202623"
-        className="rounded-xl bg-[#7A5C3A] px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="rounded-xl bg-[#CBB47B] px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         WhatsApp – kostenlose Besichtigung
       </a>
@@ -286,7 +444,7 @@ export default function HomePage() {
     <div className="mt-12 flex flex-wrap gap-4">
       <a
         href="https://wa.me/436767202623"
-        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         Kostenlose Besichtigung anfragen
       </a>
@@ -355,7 +513,7 @@ export default function HomePage() {
               <td className="px-5 py-4">{low}</td>
               <td className="px-5 py-4">{mid}</td>
               <td className="px-5 py-4">{high}</td>
-              <td className="px-5 py-4 text-[#7A5C3A] font-semibold">{messie}</td>
+              <td className="px-5 py-4 text-[#CBB47B] font-semibold">{messie}</td>
             </tr>
           ))}
         </tbody>
@@ -468,7 +626,7 @@ export default function HomePage() {
                 step.cta.primary ? (
                   <a
                     href={step.cta.href}
-                    className="inline-flex items-center rounded-xl bg-[#7A5C3A] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+                    className="inline-flex items-center rounded-xl bg-[#CBB47B] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
                   >
                     {step.cta.label}
                   </a>
@@ -507,7 +665,7 @@ export default function HomePage() {
     <div className="mt-10 flex flex-wrap gap-4">
       <a
         href="https://wa.me/436767202623"
-        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         Kostenlose Besichtigung anfragen
       </a>
@@ -609,7 +767,7 @@ export default function HomePage() {
         <div className="mt-8 flex flex-wrap gap-4">
           <a
             href="https://wa.me/436767202623"
-            className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+            className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
           >
             Kostenlose Besichtigung anfragen
           </a>
@@ -631,11 +789,11 @@ export default function HomePage() {
             {/* Для server component ok: */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/process-baden.webp"
-              alt="Ablauf der Entrümpelung in Baden"
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
+  src="/images/baden-3th-pic.jpeg"
+  alt="Ablauf der Entrümpelung in Baden"
+  className="h-full w-full object-cover !h-full !w-full"
+  loading="lazy"
+/>
             <div className="absolute inset-0 bg-gradient-to-tr from-[#2B3A42]/30 via-transparent to-transparent" />
           </div>
 
@@ -753,7 +911,7 @@ export default function HomePage() {
     <div className="mt-10 flex flex-wrap gap-4">
       <a
         href="https://wa.me/436767202623"
-        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         Kostenlose Besichtigung anfragen
       </a>
@@ -873,7 +1031,7 @@ export default function HomePage() {
         <ul className="mt-4 space-y-3 text-[#334049] text-[15px]">
           <li className="flex items-center gap-3">
             {/* phone icon */}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#7A5C3A]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#CBB47B]">
               <path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.3-.3l3.5 1.2c.7.3 1.1 1 .9 1.7-.7 2.1-2.8 3.6-5.1 3.6C9.7 22.4 1.6 14.3 1.6 4.9c0-2.3 1.5-4.4 3.6-5.1.7-.3 1.5.2 1.7.9l1.2 3.5c.2.5 0 1.1-.3 1.3L6.6 10.8z"/>
             </svg>
             <a href="tel:+436767202623" className="font-semibold text-[#2B3A42] hover:underline">
@@ -921,7 +1079,7 @@ export default function HomePage() {
         <div className="mt-6 flex flex-wrap gap-4">
           <a
             href="https://wa.me/436767202623"
-            className="inline-flex items-center justify-center rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+            className="inline-flex items-center justify-center rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
           >
             Jetzt per WhatsApp anfragen
           </a>
@@ -970,7 +1128,7 @@ export default function HomePage() {
           <div className="mt-4 flex flex-wrap gap-3">
             <a
               href="https://wa.me/436767202623"
-              className="inline-flex items-center justify-center rounded-xl bg-[#7A5C3A] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-xl bg-[#CBB47B] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
             >
               WhatsApp starten
             </a>
@@ -989,7 +1147,7 @@ export default function HomePage() {
     <div className="mt-12 flex flex-wrap items-center gap-4">
       <a
         href="https://wa.me/436767202623"
-        className="rounded-2xl bg-[#7A5C3A] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="rounded-2xl bg-[#CBB47B] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         Kostenlose Besichtigung anfragen
       </a>
@@ -1080,7 +1238,7 @@ export default function HomePage() {
           className="rounded-2xl border border-[#E8E1D9] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
         >
           <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full"
-               style={{ background: "#CBB47B22", color: "#7A5C3A", border: "1px solid #E8E1D9" }}>
+               style={{ background: "#CBB47B22", color: "#CBB47B", border: "1px solid #E8E1D9" }}>
             {/* dezentes Icon (Check) */}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z"/>
@@ -1099,7 +1257,7 @@ export default function HomePage() {
       </span>
       <a
         href="https://wa.me/436767202623"
-        className="ml-auto rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+        className="ml-auto rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
       >
         WhatsApp – kostenlose Besichtigung
       </a>

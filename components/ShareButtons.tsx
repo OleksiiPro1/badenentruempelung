@@ -18,7 +18,7 @@ const PRIMARY = "#2B3A42";
 const SECONDARY = "#A7A9AC";
 const ACCENT = "#CBB47B";
 const BG = "#FAFAFA";
-const BROWN = "#7A5C3A";
+const BROWN = "#CBB47B";
 
 export type ShareButtonsPremiumProps = {
   siteUrl: string; // базовый URL сайта без хвостового слэша

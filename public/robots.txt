@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://raumfrei-wien.at/sitemap.xml
+Sitemap: https://badenentruempelung.at/sitemap.xml
 
