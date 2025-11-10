@@ -1,1187 +1,1119 @@
 // app/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-// ===== SEO (Wien) =====
 export const metadata: Metadata = {
-  title: "Entrümpelung & Räumung in Wien vom Profi – schnell & diskret",
+  title: "Entrümpelung Baden – Schnell, Diskret & Professionell vom Experten",
   description:
-    "Ihr Profi für Entrümpelung & Räumung in Wien: schnelle Termine, klare Abläufe, diskrete Durchführung. Kostenlose Besichtigung & fixe Zusagen.",
-  alternates: { canonical: "https://raumfrei-wien.at/" },
-  openGraph: {
-    title: "Entrümpelung & Räumung in Wien vom Profi",
-    description:
-      "Professionelle Entrümpelung & Räumung in Wien: schnelle Terminvergabe, saubere Übergabe, verlässliche Kommunikation.",
-    url: "https://raumfrei-wien.at/",
-    siteName: "raumfrei-wien.at",
-    type: "website",
-  },
-  robots: { index: true, follow: true },
+    "Entrümpelung Baden mit kostenloser Besichtigung & Fixpreis. Zuverlässige Räumung, Wertanrechnung & Ankauf in Baden & Umgebung – jetzt Termin sichern.",
 };
 
-// ===== Palette & Contacts =====
-const BRAND = {
-  accent: "rgb(217, 117, 0)",
-  black: "#000",
-  white: "#fff",
-  gray: "#6B7280",
-  email: "office@raumfrei-wien.at",
-  phone: "+436765055437",
-};
-
-// ===== ФУНКЦИЯ: быстрый контактный блок =====
-function ContactStrip({
-  email = BRAND.email,
-  phone = BRAND.phone,
-  accent = BRAND.accent,
-  gray = BRAND.gray,
-  black = BRAND.black,
-  white = BRAND.white,
-}: {
-  email?: string;
-  phone?: string;
-  accent?: string;
-  gray?: string;
-  black?: string;
-  white?: string;
-}) {
-  const tel = `tel:${phone.replace(/\s/g, "")}`;
-  const wa = `https://wa.me/${phone.replace(/[^\d]/g, "")}`;
-  const mail = `mailto:${email}?subject=Anfrage%20Raumfrei%20Wien`;
+export default function HomePage() {
   return (
-    <div className="mt-6 flex flex-wrap items-center gap-3">
-      <a
-        href={tel}
-        className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold shadow-sm transition hover:opacity-95"
-        style={{ background: accent, color: white }}
+    <>
+      {/* ===== HERO: Entrümpelung Baden vom Profi ===== */}
+      <section
+        aria-label="Entrümpelung Baden vom Profi"
+        className="relative overflow-hidden bg-[#FAFAFA]"
       >
-        Anrufen
+        {/* Фон */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-baden.webp"
+            alt="Entrümpelung Baden vom Profi"
+            fill
+            priority
+            className="object-cover object-center opacity-40"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2B3A42]/70 via-[#2B3A42]/30 to-transparent" />
+        </div>
+
+        {/* Контент */}
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-10 md:px-10 md:py-36 text-white">
+          <div className="max-w-[700px]">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-[#CBB47B]">
+              Entrümpelung Baden <br /> vom Profi
+            </h1>
+
+            <p className="mt-6 text-base md:text-lg text-[#F5F5F5] leading-relaxed">
+              Baden Entrümpelung steht für Professionalität, Diskretion und Effizienz.
+              Unser erfahrenes Team kümmert sich um jede Art von Entrümpelung in Baden
+              und Umgebung – schnell, sauber und mit höchster Sorgfalt. Wir bieten faire
+              Preise, transparente Abläufe und eine kostenlose Besichtigung vor Ort.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="https://wa.me/436767202623"
+                className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-medium text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+              >
+                WhatsApp Kontakt
+              </Link>
+              <Link
+                href="tel:+436767202623"
+                className="rounded-xl border border-white/40 px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#2B3A42]"
+              >
+                Jetzt anrufen
+              </Link>
+            </div>
+
+            <p className="mt-6 text-sm text-[#D7D7D7]">
+              Kostenlose Besichtigung & unverbindliches Angebot in ganz Baden.
+            </p>
+          </div>
+        </div>
+
+        {/* Декоративный низ */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+      </section>
+
+      {/* ===== SEKTION 2: Ankauf & Verwertung ===== */}
+      <section
+        id="ankauf-verwertung"
+        className="relative overflow-hidden bg-[#FDFBF9] py-20 md:py-10"
+        aria-label="Entrümpelung Baden – Ankauf & Verwertung"
+      >
+        <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#3A2E25] mb-6">
+            Entrümpelung Baden – Ankauf & Verwertung
+          </h2>
+
+          <p className="text-lg leading-relaxed text-[#4B3C30] max-w-[820px]">
+            Bei <strong>Baden Entrümpelung</strong> erhalten Sie mehr als nur eine Räumung.
+            Wir bieten zusätzlich die Möglichkeit zum Ankauf und zur Verwertung von
+            wertvollen Gegenständen – sei es Antiquitäten, Möbel, Gemälde, Sammlungen
+            oder Schmuck. So reduzieren sich die Gesamtkosten Ihrer Entrümpelung deutlich
+            und gleichzeitig werden gut erhaltene Stücke sinnvoll weiterverwendet.
+          </p>
+
+          <p className="mt-6 text-lg leading-relaxed text-[#4B3C30] max-w-[820px]">
+            Unsere Experten bewerten Gegenstände direkt vor Ort transparent und fair.
+            Die Wertanrechnung wird sofort in das Angebot integriert – klar, ehrlich
+            und nachvollziehbar. Damit kombinieren wir professionelle Entrümpelung in
+            Baden mit echter Wertschätzung für hochwertige Objekte.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Wertanrechnung",
+                text: "Faire Bewertung Ihrer Möbel, Antiquitäten und Sammlerstücke direkt beim Besichtigungstermin.",
+              },
+              {
+                title: "Ankauf vor Ort",
+                text: "Sofortige Anrechnung wertvoller Gegenstände – transparent und unkompliziert.",
+              },
+              {
+                title: "Kostenoptimierung",
+                text: "Durch Ankauf & Verwertung sparen Sie bares Geld und reduzieren die Gesamtkosten der Räumung.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-[#E8E1D9] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)]"
+              >
+                <h3 className="text-xl font-semibold text-[#3A2E25] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[#4B3C30] leading-relaxed text-[15px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Декоративная нижняя линия */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FDFBF9] to-transparent" />
+      </section>
+
+      {/* ===== SEKTION 3: Leistungen – Entrümpelung Baden ===== */}
+<section
+  id="leistungen-baden"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+  aria-label="Leistungen – Entrümpelung Baden"
+>
+  <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
+    <header className="mb-8">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Leistungen – Entrümpelung Baden
+      </h2>
+      <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#334049]">
+        Verlässlich, termintreu und mit über 20 Jahren Erfahrung in Baden & Umgebung:
+        von Wohnung bis Haus, vom Keller bis zum Dachboden – inklusive klarer Abläufe
+        und transparenter Fixpreise nach Besichtigung.
+      </p>
+    </header>
+
+    {/* Сетка услуг */}
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Wohnungsentrümpelung",
+          href: "/raeumung-baden",
+          text:
+            "Rasch und sauber – ideale Lösung für Teil- oder Komplett-Räumungen in Baden.",
+        },
+        {
+          title: "Hausentrümpelung",
+          href: "/raeumung-baden",
+          text:
+            "Strukturiert geplant, mit klarer Zeitschiene bis zur besenreinen Übergabe.",
+        },
+        {
+          title: "Kellerentrümpelung",
+          href: "/kellerentruempelung-baden",
+          text:
+            "Mehr Platz im Untergeschoss – effizient und ordentlich ausgeführt.",
+        },
+        {
+          title: "Dachboden Räumung",
+          href: "/dachboden-raeumung-baden",
+          text:
+            "Sicheres Arbeiten auch in engen Bereichen, inklusive sorgfältiger Übergabe.",
+        },
+        {
+          title: "Firmenauflösung & Büro",
+          href: "/firmenaufloesung-baden",
+          text:
+            "Betriebs- und Büroflächen professionell räumen – diskret und planbar.",
+        },
+        {
+          title: "Verlassenschaften",
+          href: "/verlassenschaften-baden",
+          text:
+            "Einfühlsam und zuverlässig – inklusive Wertanrechnung bei geeigneten Stücken.",
+        },
+        {
+          title: "Messie Hilfe Baden",
+          href: "/entruempelungsfirma-baden",
+          text:
+            "Respektvoll, strukturiert und mit klarer Vorgehensweise – vertraulich abgewickelt.",
+        },
+      ].map((item) => (
+        <a
+          key={item.title}
+          href={item.href}
+          className="group block rounded-2xl border border-[#A7A9AC55] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
+        >
+          <h3 className="text-xl font-semibold text-[#2B3A42]">
+            {item.title}
+          </h3>
+          <p className="mt-2 text-[15px] leading-relaxed text-[#334049]">
+            {item.text}
+          </p>
+          <span
+            className="mt-4 inline-block h-[2px] w-0 bg-[#CBB47B] transition-all duration-300 group-hover:w-20"
+            aria-hidden="true"
+          />
+        </a>
+      ))}
+    </div>
+
+    {/* CTA в конце секции */}
+    <div className="mt-10 flex flex-wrap items-center gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-xl bg-[#7A5C3A] px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        WhatsApp – kostenlose Besichtigung
       </a>
       <a
-        href={wa}
-        className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold border transition"
-        style={{ borderColor: `${gray}55`, color: black }}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-5 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
       >
-        WhatsApp
-      </a>
-      <a
-        href={mail}
-        className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold border transition"
-        style={{ borderColor: `${gray}55`, color: black }}
-      >
-        E-Mail
+        Jetzt anrufen
       </a>
     </div>
-  );
-}
+  </div>
 
-// ===== PAGE =====
-export default function Home() {
-  return (
-    <main
-      id="main"
-      className="min-h-screen"
-      style={{ background: BRAND.white, color: BRAND.black }}
-    >
+  {/* Декор внизу */}
+  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+</section>
+{/* ===== SEKTION 4: Entrümpelung Baden Kosten ===== */}
+<section
+  id="entruempelung-baden-kosten"
+  className="relative overflow-hidden bg-[#FDFBF9] py-20 md:py10"
+  aria-label="Entrümpelung Baden Kosten"
+>
+  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Entrümpelung Baden Kosten
+      </h2>
+      <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#4B3C30]">
+        Faire Preise mit transparenter Kalkulation: Bei Baden Entrümpelung erhalten Sie 
+        vor Beginn einen Fixpreis, der alle Leistungen umfasst. Keine versteckten Zuschläge, 
+        keine Überraschungen – nur ein klar strukturiertes Angebot nach kostenloser Besichtigung.
+      </p>
+    </header>
 
+    {/* Preisfaktoren */}
+    <div className="grid gap-6 md:grid-cols-3">
+      {[
+        {
+          title: "Kostenlose Besichtigung",
+          text: "Nach einer Vor-Ort-Besichtigung erhalten Sie ein verbindliches Angebot mit Fixpreis-Garantie.",
+        },
+        {
+          title: "Faire Bewertung",
+          text: "Wertvolle Gegenstände werden angerechnet – das senkt den Gesamtpreis Ihrer Entrümpelung.",
+        },
+        {
+          title: "Individuelle Planung",
+          text: "Jedes Objekt ist anders – wir kalkulieren je nach Umfang, Zugänglichkeit und gewünschtem Zeitrahmen.",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="rounded-2xl border border-[#E8E1D9] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)]"
+        >
+          <h3 className="text-xl font-semibold text-[#3A2E25] mb-3">
+            {item.title}
+          </h3>
+          <p className="text-[#4B3C30] leading-relaxed text-[15px]">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
 
-      {/* SECTION 1: HERO – Entrümpelung & Räumung in Wien vom Profi (Premium) */}
-<section aria-label="Entrümpelung & Räumung in Wien vom Profi – Start" className="relative overflow-hidden">
-  {/* Premium background */}
+   
+
+    {/* CTA */}
+    <div className="mt-12 flex flex-wrap gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        Kostenlose Besichtigung anfragen
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
+    </div>
+  </div>
+
+  {/* Декоративная линия */}
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FDFBF9] to-transparent" />
+</section>
+
+ 
+{/* ===== SEKTION 5: Preisübersicht Baden ===== */}
+<section
+  id="preisuebersicht-baden"
+  className="relative overflow-hidden bg-[#FAFAFA] py-1 md:py10"
+  aria-label="Preisübersicht Baden"
+>
+  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Preisübersicht Baden
+      </h2>
+      <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#4B3C30]">
+        Nachfolgend finden Sie unsere aktuellen Richtpreise für Entrümpelungen in Baden. 
+        Die Preise dienen als Orientierung und beinhalten bereits Besichtigung, 
+        Arbeitszeit und Abtransport. Der endgültige Fixpreis wird nach einer kostenlosen 
+        Vor-Ort-Bewertung erstellt – transparent und fair.
+      </p>
+    </header>
+
+    {/* Tabelle */}
+    <div className="overflow-hidden rounded-2xl border border-[#E8E1D9] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.05)]">
+      <table className="w-full text-left text-sm md:text-base text-[#3A2E25]">
+        <thead className="bg-[#F7F5F2] text-[#2B3A42]">
+          <tr>
+            <th className="px-5 py-4 font-semibold">Objekt / Umfang</th>
+            <th className="px-5 py-4 font-semibold">wenig Hausrat</th>
+            <th className="px-5 py-4 font-semibold">normaler Hausrat</th>
+            <th className="px-5 py-4 font-semibold">viel Hausrat</th>
+            <th className="px-5 py-4 font-semibold">Messie</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["Keller", "ab €195", "ab €395", "ab €695", "ab €895"],
+            ["kleine Wohnung", "ab €695", "ab €1.395", "ab €1.795", "ab €2.145"],
+            ["große Wohnung", "ab €1.145", "ab €1.695", "ab €2.345", "ab €3.445"],
+            ["Haus", "ab €895", "ab €2.145", "ab €3.445", "ab €3.945"],
+            ["Dachboden", "ab €495", "ab €795", "ab €1.095", "ab €1.595"],
+            ["Garage", "ab €245", "ab €445", "ab €695", "ab €895"],
+            ["Lagerraum", "ab €295", "ab €495", "ab €795", "ab €1.095"],
+            ["Büro / Geschäft", "ab €745", "ab €1.295", "ab €1.795", "ab €2.495"],
+            ["Verlassenschaft", "nach Bewertung", "nach Bewertung", "nach Bewertung", "nach Bewertung"],
+          ].map(([obj, low, mid, high, messie]) => (
+            <tr
+              key={obj}
+              className="border-t border-[#E8E1D9] hover:bg-[#FAF9F7]/70 transition"
+            >
+              <td className="px-5 py-4 font-medium">{obj}</td>
+              <td className="px-5 py-4">{low}</td>
+              <td className="px-5 py-4">{mid}</td>
+              <td className="px-5 py-4">{high}</td>
+              <td className="px-5 py-4 text-[#7A5C3A] font-semibold">{messie}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Hinweis + CTA */}
+    <p className="mt-5 text-sm text-[#7C7C7C]">
+      *Alle genannten Preise sind unverbindliche Richtwerte inklusive kostenloser Besichtigung. 
+      Der Fixpreis wird nach genauer Einschätzung des Arbeitsaufwands berechnet.
+    </p>
+
+    <div className="mt-10 flex flex-wrap gap-4">
+      
+    </div>
+  </div>
+
+  {/* Dekor unten */}
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+</section>
+{/* ===== SEKTION 6: Ablauf Entrümpelung Baden ===== */}
+<section
+  id="ablauf-baden"
+  className="relative overflow-hidden bg-[#FDFBF9] py-22 md:py-10"
+  aria-label="Ablauf Entrümpelung Baden"
+>
+  {/* Декор фона */}
   <div
-    aria-hidden
     className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
     style={{
       backgroundImage: `
-        radial-gradient(120rem 60rem at 10% -10%, rgba(217,117,0,.12), transparent),
-        radial-gradient(90rem 50rem at 110% 30%, rgba(217,117,0,.10), transparent),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.98))
+        radial-gradient(60rem 30rem at 0% 10%, #E7EBEE66 0%, transparent 60%),
+        radial-gradient(60rem 30rem at 100% 90%, #E7EBEE44 0%, transparent 60%)
       `,
     }}
   />
-  {/* Subtle glow ring */}
+
+  <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+    <header className="mb-12 md:mb-16">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Ablauf Entrümpelung Baden
+      </h2>
+      <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#334049]">
+        Klar, strukturiert und verlässlich: Von der ersten Anfrage bis zur
+        besenreinen Übergabe – jeder Schritt ist transparent und effizient geplant.
+        Termine werden eingehalten, Kommunikation bleibt einfach und direkt.
+      </p>
+    </header>
+
+    {/* Линия-таймлайн */}
+    <div className="relative">
+      <div className="absolute left-[24px] top-0 bottom-0 hidden md:block w-[2px] bg-[#E8E1D9]" aria-hidden="true" />
+
+      <div className="space-y-6">
+        {[
+          {
+            n: 1,
+            title: "Kontakt & Terminvereinbarung",
+            text:
+              "Anruf, WhatsApp oder E-Mail – Sie erhalten rasch einen Termin für eine kostenlose Besichtigung in Baden & Umgebung.",
+            cta: { label: "Jetzt Termin sichern", href: "https://wa.me/436767202623", primary: true },
+          },
+          {
+            n: 2,
+            title: "Kostenlose Besichtigung",
+            text:
+              "Wir sehen uns die Räumlichkeiten vor Ort an, klären Details und beantworten Ihre Fragen – präzise, freundlich und diskret.",
+          },
+          {
+            n: 3,
+            title: "Fixpreis-Angebot",
+            text:
+              "Sie erhalten ein transparentes Angebot mit Fixpreis. Alle Leistungen sind enthalten, klar formuliert und nachvollziehbar.",
+          },
+          {
+            n: 4,
+            title: "Termin & Durchführung",
+            text:
+              "Zum vereinbarten Zeitpunkt arbeitet unser Team zügig und ordentlich. Absprachen werden exakt eingehalten.",
+          },
+          {
+            n: 5,
+            title: "Besenreine Übergabe",
+            text:
+              "Abschluss mit gemeinsamer Abnahme – Sie erhalten die Räume besenrein übergeben, alles wie vereinbart.",
+            cta: { label: "Unverbindliches Angebot erhalten", href: "tel:+436767202623" },
+          },
+        ].map((step) => (
+          <div
+            key={step.n}
+            className="relative grid gap-4 rounded-2xl border border-[#E8E1D9] bg-white p-5 md:grid-cols-[64px_1fr_auto] md:gap-6 md:p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition-shadow"
+          >
+            {/* Номер шага */}
+            <div className="flex md:block">
+              <div className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#2B3A42] text-white text-lg font-semibold">
+                {step.n}
+              </div>
+            </div>
+
+            {/* Текст шага */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#2B3A42]">{step.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">{step.text}</p>
+            </div>
+
+            {/* CTA шага (опционально) */}
+            <div className="md:self-center">
+              {step.cta ? (
+                step.cta.primary ? (
+                  <a
+                    href={step.cta.href}
+                    className="inline-flex items-center rounded-xl bg-[#7A5C3A] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+                  >
+                    {step.cta.label}
+                  </a>
+                ) : (
+                  <a
+                    href={step.cta.href}
+                    className="inline-flex items-center rounded-xl border border-[#2B3A42] px-5 py-2.5 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+                  >
+                    {step.cta.label}
+                  </a>
+                )
+              ) : null}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Блок доверия */}
+    <div className="mt-12 grid gap-4 sm:grid-cols-3">
+      {[
+        { label: "Über 20 Jahre Erfahrung" },
+        { label: "Kostenlose Besichtigung" },
+        { label: "Fixpreis ohne Überraschungen" },
+      ].map((b) => (
+        <div
+          key={b.label}
+          className="rounded-2xl border border-[#E8E1D9] bg-white px-5 py-4 text-center text-[15px] font-medium text-[#2B3A42] shadow-[0_4px_14px_rgba(0,0,0,0.04)]"
+        >
+          {b.label}
+        </div>
+      ))}
+    </div>
+
+    {/* Главный CTA */}
+    <div className="mt-10 flex flex-wrap gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        Kostenlose Besichtigung anfragen
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
+    </div>
+  </div>
+</section>
+{/* ===== SEKTION 7: Wie funktioniert Entrümpelung in Baden? ===== */}
+<section
+  id="wie-funktioniert"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-28"
+  aria-label="Wie funktioniert Entrümpelung in Baden?"
+>
+  {/* Декор фона */}
   <div
-    aria-hidden
-    className="pointer-events-none absolute -top-24 right-[-20%] h-[44rem] w-[44rem] rounded-full blur-3xl opacity-50"
-    style={{ background: "radial-gradient(circle, rgba(217,117,0,.18) 0%, transparent 60%)" }}
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
+      backgroundImage: `
+        radial-gradient(60rem 30rem at 0% 0%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(60rem 30rem at 100% 100%, #E7EBEE33 0%, transparent 60%)
+      `,
+    }}
   />
 
-  <div className="relative mx-auto w-full max-w-[1150px] px-6 md:px-8 py-10 md:py-10">
-    <div className="grid items-center gap-10 md:grid-cols-2">
-      {/* LEFT: Text */}
+  <div className="relative mx-auto w-full max-w-[1200px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Wie funktioniert Entrümpelung in Baden?
+      </h2>
+      <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Effizient, planbar und verlässlich: Wir kombinieren klare Kommunikation mit
+        sorgfältiger Durchführung. Von der ersten Anfrage bis zur Übergabe bleibt
+        alles transparent, termintreu und komfortabel für Sie.
+      </p>
+    </header>
+
+    {/* 2-колоночный премиум-блок */}
+    <div className="grid items-center gap-10 lg:grid-cols-2">
+      {/* Текстовая колонка */}
       <div>
-        {/* Eyebrow / brand line */}
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs tracking-widest uppercase"
-             style={{ border: "1px solid rgba(0,0,0,.07)", background: "rgba(255,255,255,.7)", backdropFilter: "blur(6px)" }}>
-          <span style={{ color: "#6B7280" }}>raumfrei-wien.at</span>
-          <span aria-hidden className="h-[6px] w-[6px] rounded-full" style={{ background: "rgb(217, 117, 0)" }} />
-          <span style={{ color: "#6B7280" }}>Wien</span>
+        <div className="grid gap-5">
+          {/* Карточки преимуществ */}
+          {[
+            {
+              title: "Klare Planung & feste Zeitfenster",
+              text:
+                "Sie erhalten frühzeitig einen Terminrahmen und wissen genau, wann unser Team eintrifft und wann die Übergabe erfolgt.",
+            },
+            {
+              title: "Kostenloser Vor-Ort-Termin mit Fixpreis",
+              text:
+                "Nach der Besichtigung erstellen wir ein verbindliches Angebot mit Fixpreis. Transparent, ohne Überraschungen.",
+            },
+            {
+              title: "Erfahrenes Team & saubere Durchführung",
+              text:
+                "Unsere Teams arbeiten routiniert, sorgfältig und diskret – mit Blick fürs Detail und verlässlicher Abwicklung.",
+            },
+            {
+              title: "Wertanrechnung möglich",
+              text:
+                "Geeignete Gegenstände werden fair bewertet und angerechnet – das reduziert Ihre Gesamtkosten.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl border border-[#A7A9AC44] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
+            >
+              <h3 className="text-[20px] font-semibold text-[#2B3A42]">{item.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">{item.text}</p>
+            </div>
+          ))}
         </div>
 
-        <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
-          Entrümpelung Wien vom Profi
-        </h1>
+        {/* Мини-бейджи доверия */}
+        <div className="mt-6 flex flex-wrap gap-3">
+          {[
+            "Über 20 Jahre Erfahrung",
+            "Kostenlose Besichtigung",
+            "Fixpreis-Garantie",
+            "Termintreue",
+          ].map((b) => (
+            <span
+              key={b}
+              className="rounded-full border border-[#A7A9AC66] bg-white/90 px-4 py-2 text-sm text-[#2B3A42]"
+            >
+              {b}
+            </span>
+          ))}
+        </div>
 
-        <p className="mt-4 text-base md:text-lg leading-relaxed" style={{ color: "#6B7280" }}>
-          Schnelle Termine, klare Abläufe und eine saubere Übergabe: Ihr regionales Team für
-          <strong> Entrümpelung&nbsp;&amp;&nbsp;Räumung in Wien vom Profi</strong>. Wir arbeiten strukturiert,
-          diskret und mit fixen Zusagen – von der kostenlosen Besichtigung bis zur Schlüsselrückgabe.
+        {/* CTA */}
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a
+            href="https://wa.me/436767202623"
+            className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+          >
+            Kostenlose Besichtigung anfragen
+          </a>
+          <a
+            href="tel:+436767202623"
+            className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+          >
+            Direkt anrufen
+          </a>
+        </div>
+      </div>
+
+      {/* Визуальная колонка */}
+      <div className="relative">
+        <div className="relative overflow-hidden rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+          {/* Вставь своё тематическое фото Baden / Interieur */}
+          <div className="relative h-[260px] w-full md:h-[360px]">
+            {/* Можно использовать <Image> с реальным изображением: /images/process-baden.webp */}
+            {/* Для server component ok: */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/process-baden.webp"
+              alt="Ablauf der Entrümpelung in Baden"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#2B3A42]/30 via-transparent to-transparent" />
+          </div>
+
+          {/* Нижний блок с „Checkliste“ */}
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-[#2B3A42]">Ihr Vorteil in Baden</h3>
+            <ul className="mt-3 grid gap-2 text-[15px] text-[#334049]">
+              {[
+                "Schnelle Termine & klare Kommunikation",
+                "Fixpreis nach Besichtigung",
+                "Diskret & zuverlässig",
+                "Wertanrechnung bei geeigneten Stücken",
+              ].map((li) => (
+                <li key={li} className="flex items-start gap-2">
+                  <span
+                    className="mt-[5px] inline-block h-1.5 w-1.5 rounded-full"
+                    style={{ background: "#CBB47B" }}
+                    aria-hidden="true"
+                  />
+                  <span>{li}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Золотистый отблеск снизу */}
+        <div className="pointer-events-none absolute -bottom-6 left-1/2 h-24 w-[80%] -translate-x-1/2 rounded-[48px] opacity-70"
+             style={{ background: "radial-gradient(60% 40% at 50% 50%, #CBB47B33, transparent)" }} />
+      </div>
+    </div>
+  </div>
+</section>
+{/* ===== SEKTION 8: FAQ – Entrümpelung Baden ===== */}
+<section
+  id="faq-baden"
+  className="relative overflow-hidden bg-[#FDFBF9] py-20 md:py-28"
+  aria-label="FAQ – Entrümpelung Baden"
+>
+  {/* Декор фона */}
+  <div
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
+      backgroundImage: `
+        radial-gradient(56rem 28rem at -10% 0%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(56rem 28rem at 110% 100%, #E7EBEE33 0%, transparent 60%)
+      `,
+    }}
+  />
+
+  <div className="relative mx-auto w-full max-w-[1150px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        FAQ – Entrümpelung Baden
+      </h2>
+      <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#334049]">
+        Kurze, klare Antworten – damit Sie rasch entscheiden können. Bei weiteren Fragen
+        sind wir jederzeit persönlich für Sie da.
+      </p>
+    </header>
+
+    {/* Премиальный аккордеон на <details> без клиентского JS */}
+    <div className="grid gap-4">
+      {[
+        {
+          q: "Wie schnell ist ein Termin in Baden möglich?",
+          a: "In der Regel binnen weniger Tage. Nennen Sie Ihren Wunschzeitraum – wir stimmen einen fixen Slot ab und halten ihn ein.",
+        },
+        {
+          q: "Ist die Besichtigung wirklich kostenlos?",
+          a: "Ja. Vor Ort klären wir alles und erstellen ein verbindliches Angebot mit Fixpreis – transparent und nachvollziehbar.",
+        },
+        {
+          q: "Wie werden die Kosten berechnet?",
+          a: "Nach Umfang, Zugänglichkeit und Zeitrahmen. Sie erhalten vorab einen Fixpreis, der alle vereinbarten Leistungen umfasst.",
+        },
+        {
+          q: "Gibt es eine Wertanrechnung bei geeigneten Stücken?",
+          a: "Ja. Geeignete Gegenstände werden fair bewertet und direkt im Angebot angerechnet – das senkt Ihre Gesamtkosten.",
+        },
+        {
+          q: "Arbeiten Sie auch am Wochenende?",
+          a: "Nach Vereinbarung möglich. Sagen Sie uns, was für Sie passt – wir planen verlässlich und termintreu.",
+        },
+        {
+          q: "Wie läuft die Übergabe ab?",
+          a: "Gemeinsame Abnahme zum Schluss. Sie erhalten die Räume besenrein übergeben – genau wie vereinbart.",
+        },
+        {
+          q: "Bieten Sie Hilfe bei Messie-Wohnungen an?",
+          a: "Ja. Diskret, strukturiert und respektvoll – mit klaren Abläufen und zuverlässiger Durchführung in Baden & Umgebung.",
+        },
+      ].map((item, i) => (
+        <details
+          key={i}
+          className="group rounded-2xl border border-[#E8E1D9] bg-white p-5 open:shadow-[0_10px_28px_rgba(0,0,0,0.08)] shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow"
+        >
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+            <h3 className="text-base md:text-lg font-semibold text-[#2B3A42]">
+              {item.q}
+            </h3>
+            <span className="inline-grid h-7 w-7 place-items-center rounded-full border border-[#A7A9AC66] text-[#2B3A42] transition group-open:rotate-45">
+              +
+            </span>
+          </summary>
+          <p className="mt-3 text-[15px] leading-relaxed text-[#4B3C30]">
+            {item.a}
+          </p>
+        </details>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="mt-10 flex flex-wrap gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        Kostenlose Besichtigung anfragen
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
+    </div>
+  </div>
+
+  {/* JSON-LD для FAQPage (SEO) */}
+  <script
+    type="application/ld+json"
+    // eslint-disable-next-line react/no-danger
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wie schnell ist ein Termin in Baden möglich?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In der Regel binnen weniger Tage. Nennen Sie Ihren Wunschzeitraum – wir stimmen einen fixen Slot ab und halten ihn ein."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ist die Besichtigung wirklich kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Vor Ort klären wir alles und erstellen ein verbindliches Angebot mit Fixpreis – transparent und nachvollziehbar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie werden die Kosten berechnet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nach Umfang, Zugänglichkeit und Zeitrahmen. Sie erhalten vorab einen Fixpreis, der alle vereinbarten Leistungen umfasst."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gibt es eine Wertanrechnung bei geeigneten Stücken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Geeignete Gegenstände werden fair bewertet und direkt im Angebot angerechnet – das senkt Ihre Gesamtkosten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Arbeiten Sie auch am Wochenende?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nach Vereinbarung möglich. Sagen Sie uns, was für Sie passt – wir planen verlässlich und termintreu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie läuft die Übergabe ab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gemeinsame Abnahme zum Schluss. Sie erhalten die Räume besenrein übergeben – genau wie vereinbart."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bieten Sie Hilfe bei Messie-Wohnungen an?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Diskret, strukturiert und respektvoll – mit klaren Abläufen und zuverlässiger Durchführung in Baden & Umgebung."
+            }
+          }
+        ]
+      })
+    }}
+  />
+</section>
+{/* ===== SEKTION 9: Kontakt – Baden Entrümpelung ===== */}
+<section
+  id="kontakt"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+  aria-label="Kontakt – Baden Entrümpelung"
+>
+  {/* Декор фона */}
+  <div
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
+      backgroundImage: `
+        radial-gradient(70rem 30rem at 0% 10%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(70rem 30rem at 100% 90%, #E7EBEE33 0%, transparent 60%)
+      `,
+    }}
+  />
+
+  <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Kontakt – Baden Entrümpelung
+      </h2>
+      <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Kostenlose Besichtigung & Fixpreis-Angebot. Rasche Termine in Baden & Umgebung – 
+        verlässlich, diskret und mit über 20 Jahren Erfahrung.
+      </p>
+    </header>
+
+    {/* Две премиум-карты: Kontakte + Direkt-CTA */}
+    <div className="grid gap-6 lg:grid-cols-2">
+      {/* Karte: Kontaktdaten */}
+      <div className="rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-8 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+        <h3 className="text-xl font-semibold text-[#2B3A42]">Direkter Kontakt</h3>
+        <ul className="mt-4 space-y-3 text-[#334049] text-[15px]">
+          <li className="flex items-center gap-3">
+            {/* phone icon */}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#7A5C3A]">
+              <path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1.3 1.3 0 011.3-.3l3.5 1.2c.7.3 1.1 1 .9 1.7-.7 2.1-2.8 3.6-5.1 3.6C9.7 22.4 1.6 14.3 1.6 4.9c0-2.3 1.5-4.4 3.6-5.1.7-.3 1.5.2 1.7.9l1.2 3.5c.2.5 0 1.1-.3 1.3L6.6 10.8z"/>
+            </svg>
+            <a href="tel:+436767202623" className="font-semibold text-[#2B3A42] hover:underline">
+              +43 676 720 26 23
+            </a>
+          </li>
+          <li className="flex items-center gap-3">
+            {/* whatsapp icon */}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#2B3A42]">
+              <path d="M20 3.9A10.9 10.9 0 0012 1 11 11 0 001 12a11 11 0 001.8 6.1L1 23l5-1.7A11 11 0 1012 1c3 0 5.8 1.2 8 2.9zM12 21a9 9 0 01-4.6-1.3l-.3-.2-2.8.9.9-2.7-.2-.3A9 9 0 1112 21zm5.1-6.9c-.2-.1-1.5-.8-1.7-.9s-.4-.1-.6.2l-.8 1c-.1.1-.3.2-.6.1a6.6 6.6 0 01-1.8-1.2 7.2 7.2 0 01-1.3-1.6c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.5c0-.2-.6-1.3-.8-1.8-.2-.6-.5-.5-.7-.5h-.5c-.3 0-.6.1-.8.3a2.7 2.7 0 00-.8 2.1c0 1.2.5 2.3 1.2 3.2a11.2 11.2 0 004.3 4.1c.4.2.8.3 1.2.4.4 0 .8 0 1.1-.3.3-.4.4-.8.5-1 0-.1 0-.2-.1-.3z"/>
+            </svg>
+            <a
+              href="https://wa.me/436767202623"
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp: 436767202623
+            </a>
+          </li>
+          <li className="flex items-center gap-3">
+            {/* mail icon */}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#2B3A42]">
+              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z"/>
+            </svg>
+            <a href="mailto:info@badenentruempelung.at" className="hover:underline">
+              info@badenentruempelung.at
+            </a>
+          </li>
+          <li className="flex items-center gap-3">
+            {/* pin icon */}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-[#CBB47B]">
+              <path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            <span>Baden, Niederösterreich</span>
+          </li>
+        </ul>
+
+        {/* Microcopy */}
+        <p className="mt-5 text-sm text-[#6B7280]">
+          Kostenlose Besichtigung, verbindlicher Fixpreis & termintreue Abwicklung.
         </p>
 
-        {/* Premium bullet list with accent underline on hover */}
-        <ul className="mt-6 grid gap-3 text-sm md:grid-cols-2">
+        {/* CTA-кнопки */}
+        <div className="mt-6 flex flex-wrap gap-4">
+          <a
+            href="https://wa.me/436767202623"
+            className="inline-flex items-center justify-center rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+          >
+            Jetzt per WhatsApp anfragen
+          </a>
+          <a
+            href="tel:+436767202623"
+            className="inline-flex items-center justify-center rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+          >
+            Direkt anrufen
+          </a>
+          <a
+            href="mailto:info@badenentruempelung.at?subject=Anfrage%20Baden%20Entr%C3%BCmpelung"
+            className="inline-flex items-center justify-center rounded-xl border border-[#E8E1D9] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-white"
+          >
+            E-Mail senden
+          </a>
+        </div>
+      </div>
+
+      {/* Karte: Premium-Hinweise / Versprechen */}
+      <div className="rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-8 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+        <h3 className="text-xl font-semibold text-[#2B3A42]">Warum wir in Baden?</h3>
+        <ul className="mt-4 grid gap-3 text-[15px] text-[#334049]">
           {[
-            "Kostenlose & unverbindliche Besichtigung",
-            "Fixtermin & transparente Abstimmung",
-            "Wien-weit täglich im Einsatz",
-            "Optional: Bewertung erhaltenswerter Stücke",
-          ].map((t) => (
-            <li key={t} className="relative pl-4">
-              <span aria-hidden className="absolute left-0 top-[10px] h-[6px] w-[6px] rounded-full" style={{ background: "rgb(217, 117, 0)" }} />
-              <span className="inline-block border-b border-transparent hover:border-[rgba(217,117,0,.45)] transition">{t}</span>
+            "Über 20 Jahre Erfahrung in Baden & Umgebung",
+            "Kostenlose Besichtigung mit Fixpreis-Angebot",
+            "Diskrete, saubere und termintreue Durchführung",
+            "Wertanrechnung bei geeigneten Stücken möglich",
+          ].map((li) => (
+            <li key={li} className="flex items-start gap-2">
+              <span
+                className="mt-[6px] inline-block h-1.5 w-1.5 rounded-full"
+                style={{ background: "#CBB47B" }}
+                aria-hidden="true"
+              />
+              <span>{li}</span>
             </li>
           ))}
         </ul>
 
-        {/* Single CTA cluster (без дублей контактов) */}
-        <div className="mt-6">
-          <ContactStrip />
-        </div>
-      </div>
-
-      {/* RIGHT: Visual with glass overlay card */}
-      <div className="relative">
-        {/* frame */}
-        <div
-          className="relative mx-auto aspect-[4/3] w-full overflow-hidden rounded-3xl"
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid rgba(17,17,17,.06)",
-            boxShadow: "0 24px 80px rgba(0,0,0,.10), 0 8px 24px rgba(0,0,0,.04)",
-          }}
-        >
-          <Image
-            src="/images/main-pic-2.webp"
-            alt="Entrümpelung & Räumung in Wien – Team im Einsatz"
-            fill
-            className="object-cover"
-            sizes="(min-width:1024px) 540px, 100vw"
-            priority
-          />
-
-          {/* Glass label stripe */}
-          <div
-            className="absolute left-4 bottom-4 rounded-xl px-4 py-2 text-xs md:text-sm"
-            style={{
-              background: "rgba(255,255,255,.7)",
-              border: "1px solid rgba(0,0,0,.08)",
-              backdropFilter: "blur(8px)",
-              color: "#111111",
-              boxShadow: "0 8px 20px rgba(0,0,0,.10)",
-            }}
-          >
-            Regional • Diskret • Verlässlich
+        {/* Большой CTA-баннер */}
+        <div className="mt-8 rounded-2xl border border-[#E8E1D9] bg-[#F7F5F2] p-5">
+          <p className="text-[15px] leading-relaxed text-[#2B3A42]">
+            Sie möchten noch heute einen Termin sichern? Schreiben Sie uns kurz via WhatsApp 
+            oder rufen Sie direkt an – wir melden uns umgehend.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a
+              href="https://wa.me/436767202623"
+              className="inline-flex items-center justify-center rounded-xl bg-[#7A5C3A] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+            >
+              WhatsApp starten
+            </a>
+            <a
+              href="tel:+436767202623"
+              className="inline-flex items-center justify-center rounded-xl border border-[#2B3A42] px-5 py-2.5 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+            >
+              Anrufen
+            </a>
           </div>
         </div>
-
-        {/* floating premium annotation card */}
-        <div
-          className="absolute -top-4 -right-3 md:-right-6 rounded-2xl px-4 py-3 text-xs md:text-sm"
-          style={{
-            background: "linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86))",
-            border: "1px solid rgba(0,0,0,.06)",
-            backdropFilter: "blur(6px)",
-            boxShadow: "0 16px 40px rgba(0,0,0,.10)",
-          }}
-        >
-          <div className="font-semibold">Wien • Heute verfügbar</div>
-          <div style={{ color: "#6B7280" }}>Kurzfristige Besichtigung möglich</div>
-        </div>
       </div>
     </div>
 
-    {/* subtle bottom divider for premium feel */}
-    <div className="mt-6 h-px w-full" style={{ background: "linear-gradient(90deg, transparent, rgba(0,0,0,.06), transparent)" }} />
+    {/* Финальный крупный CTA */}
+    <div className="mt-12 flex flex-wrap items-center gap-4">
+      <a
+        href="https://wa.me/436767202623"
+        className="rounded-2xl bg-[#7A5C3A] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        Kostenlose Besichtigung anfragen
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-2xl border border-[#2B3A42] px-7 py-3.5 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Jetzt anrufen
+      </a>
+      <span className="text-sm text-[#6B7280]">
+        Fixpreis-Angebot nach Vor-Ort-Termin – transparent & verbindlich.
+      </span>
+    </div>
   </div>
 </section>
-
-      {/* SECTION 2: Entrümpelung Wien – Ankauf & Verwertung */}
+{/* ===== SEKTION 10: Experten-Tipps zur Entrümpelung in Baden ===== */}
 <section
-  aria-label="Entrümpelung Wien – Ankauf & Verwertung"
-  className="relative"
+  id="experten-tipps"
+  className="relative overflow-hidden bg-[#FDFBF9] py-20 md:py-10"
+  aria-label="Experten-Tipps zur Entrümpelung in Baden"
 >
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">
-        Entrümpelung Wien – Ankauf &amp; Verwertung
-      </h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Bei einer <strong>Entrümpelung in Wien</strong> tauchen oft Stücke auf, die zu schade
-        für den Sperrmüll sind. Wir sichten vor Ort, geben eine klare Einschätzung und bieten
-        auf Wunsch <strong>Ankauf &amp; Verwertung</strong> an – transparent, zügig und aus
-        einer Hand. So kombinieren Sie Räumung mit einem fairen Mehrwert.
-      </p>
-    </header>
-
-    <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-      {/* Linke Spalte: Was & Wie */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">Was prüfen wir – und wie läuft’s ab?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wir beurteilen Zustand, Nachfrage und Herkunft – z.&nbsp;B. ausgewählte Möbel,
-          Bilder, Uhren, Silber, Porzellan oder Sammlungen. Die Sichtung erfolgt direkt
-          im Zuge der <strong>Entrümpelung Wien</strong>; Sie erhalten eine klare, unverbindliche Einschätzung.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>Transparente Bewertung ohne Zeitdruck</li>
-          <li>Optionaler Ankauf mit schneller, sauberer Abwicklung</li>
-          <li>Kombinierbar mit Fixtermin für Räumung & Übergabe</li>
-        </ul>
-
-        <h3 className="mt-8 text-xl font-bold">Ihr Vorteil</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Ein Termin genügt häufig, um sowohl die <strong>Räumung</strong> als auch
-          eine mögliche Verwertung zu klären. Sie sparen Wege, erhalten Planungssicherheit
-          und behalten eine Ansprechperson – vom Erstkontakt bis zur Übergabe.
-        </p>
-      </article>
-
-      {/* Rechte Spalte: Mini-Ablauf + Kontakt */}
-      <aside
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">Kurzablauf Ankauf &amp; Verwertung</h3>
-        <ol className="mt-3 space-y-3 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>1) Kontakt:</span>{" "}
-            Kurze Abstimmung per Telefon, WhatsApp oder E-Mail &amp; Termin in Wien.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>2) Sichtung:</span>{" "}
-            Prüfung vor Ort mit transparenter Einschätzung – ohne Verpflichtung.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>3) Entscheidung:</span>{" "}
-            Optionaler Ankauf und direkte Abwicklung, kombiniert mit der Räumung.
-          </li>
-        </ol>
-
-        {/* Контакты (кнопки) — в едином стиле */}
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
-          <a
-            href={`tel:${BRAND.phone.replace(/\s/g, "")}`}
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold shadow-sm transition hover:opacity-95"
-            style={{ background: BRAND.accent, color: BRAND.white }}
-          >
-            Anrufen
-          </a>
-          <a
-            href={`https://wa.me/${BRAND.phone.replace(/[^\d]/g, "")}`}
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold border transition"
-            style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-          <a
-            href={`mailto:${BRAND.email}?subject=Anfrage%20Ankauf%20%26%20Verwertung%20Wien`}
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold border transition"
-            style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-          >
-            E-Mail
-          </a>
-        </div>
-
-        <p className="mt-3 text-xs" style={{ color: BRAND.gray }}>
-          E-Mail:{" "}
-          <a className="underline" href={`mailto:${BRAND.email}`}>
-            {BRAND.email}
-          </a>{" "}
-          • Telefon/WhatsApp:{" "}
-          <a className="underline" href={`tel:${BRAND.phone.replace(/\s/g, "")}`}>
-            {BRAND.phone}
-          </a>
-        </p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-
-{/* SECTION 3: Leistungen Entrümpelung Wien (по одной картинке на услугу) */}
-<section aria-label="Leistungen Entrümpelung Wien" className="relative">
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">
-        Leistungen Entrümpelung Wien
-      </h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Jede Wohn- und Arbeitssituation in Wien ist anders. Wir planen unsere Einsätze so,
-        dass sie zu Ihrem Tagesablauf, zur Lage im Haus und zu den Gegebenheiten vor Ort passen.
-        Mit klaren Absprachen, fixen Terminen und einer Ansprechperson, die Sie vom ersten Kontakt
-        bis zur Übergabe begleitet.
-      </p>
-    </header>
-
-    {(() => {
-      const items = [
-        {
-          title: "Wohnungsräumung Wien",
-          text:
-            "Ob Garçonnière, Altbau oder Familienwohnung – wir stimmen Zugang, Stiegenhaus und Zeitfenster genau mit Ihnen ab. Jede Räumung erfolgt ruhig, zügig und transparent – vom Erstgespräch bis zur Schlüsselübergabe.",
-          image: { src: "/images/Leistungen-1.webp", alt: "Wohnungsräumung Wien" },
-        },
-        {
-          title: "Hausräumung Wien",
-          text:
-            "Mehrstöckige Häuser, schmale Zufahrten oder Hoflagen: Wir planen Fahrzeuge, Teamgröße und Ablauf so, dass die Arbeit reibungslos funktioniert. Nach Abschluss übergeben wir das Objekt sauber und pünktlich.",
-          image: { src: "/images/Leistungen-2.webp", alt: "Hausräumung Wien" },
-        },
-        {
-          title: "Keller & Dachboden Wien",
-          text:
-            "Verwinkelte Zugänge oder schwer erreichbare Dachräume sind für uns Routine. Wir arbeiten strukturiert, mit kurzen Wegen und klarer Kommunikation, bis alles wieder frei und ordentlich begehbar ist.",
-          image: { src: "/images/Leistungen-3.webp", alt: "Kellerentrümpelung Wien" },
-        },
-        {
-          title: "Büro & Gewerbe Wien",
-          text:
-            "Ob Kanzlei, Praxis oder Ladenlokal – wir führen Räumungen abgestimmt auf Ihre Öffnungszeiten durch. Unser Ziel: minimale Unterbrechung Ihres Betriebs und eine saubere, termingerechte Übergabe.",
-          image: { src: "/images/Leistungen-4.webp", alt: "Büroentrümpelung Wien" },
-        },
-        
-      ];
-
-      return (
-        <div className="grid gap-10 md:grid-cols-2">
-          {items.map((item, idx) => (
-            <article
-              key={idx}
-              className={`rounded-3xl p-6 md:p-8 `}
-              style={{
-                background: BRAND.white,
-                border: `1px solid ${BRAND.gray}22`,
-                boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-              }}
-            >
-              <div className="relative mb-5 w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "16 / 9" }}>
-                <Image
-                  src={item.image.src}
-                  alt={item.image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 520px, 90vw"
-                  priority={idx === 0}
-                />
-              </div>
-
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-                {item.text}
-              </p>
-            </article>
-          ))}
-        </div>
-      );
-    })()}
-
-    {/* Kontaktstreifen ohne Icons */}
-    <div
-      className="mt-12 rounded-3xl p-6 md:p-8 text-center"
-      style={{
-        background: BRAND.white,
-        border: `1px solid ${BRAND.gray}22`,
-        boxShadow: "0 10px 28px rgba(0,0,0,.06)",
-      }}
-    >
-      <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-        Termin in Wien anfragen oder kurz abstimmen?
-        Schreiben Sie an{" "}
-        <a className="underline" href={`mailto:${BRAND.email}`}>{BRAND.email}</a>{" "}
-        oder rufen Sie direkt an:{" "}
-        <a className="underline" href={`tel:${BRAND.phone.replace(/\s/g, "")}`}>{BRAND.phone}</a>.{" "}
-        Auch per WhatsApp möglich:{" "}
-        <a
-          className="underline"
-          href={`https://wa.me/${BRAND.phone.replace(/[^\d]/g, "")}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {BRAND.phone}
-        </a>.
-      </p>
-      <div className="mt-4 flex flex-wrap justify-center gap-3">
-        <a
-          href={`tel:${BRAND.phone.replace(/\s/g, "")}`}
-          className="rounded-xl px-5 py-3 text-sm font-semibold shadow-sm transition hover:opacity-95"
-          style={{ background: BRAND.accent, color: BRAND.white }}
-        >
-          Anrufen
-        </a>
-        <a
-          href={`https://wa.me/${BRAND.phone.replace(/[^\d]/g, "")}`}
-          className="rounded-xl px-5 py-3 text-sm font-semibold border transition"
-          style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-        <a
-          href={`mailto:${BRAND.email}?subject=Anfrage%20Entr%C3%BCmpelung%20Wien`}
-          className="rounded-xl px-5 py-3 text-sm font-semibold border transition"
-          style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-        >
-          E-Mail
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-{/* SECTION 4: Entrümpelung Wien Kosten */}
-<section aria-label="Entrümpelung Wien Kosten" className="relative">
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">
-        Entrümpelung Wien Kosten – fair & nachvollziehbar
-      </h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Jede Wohn- oder Gewerbefläche hat ihre Eigenheiten. Statt Pauschalen geben wir Ihnen
-        nach einer kurzen Besichtigung in Wien eine klare Einschätzung mit Fixtermin und
-        verständlicher Beschreibung der Schritte. So bleibt alles planbar – vom ersten Gespräch
-        bis zur Übergabe.
-      </p>
-    </header>
-
-    <div className="grid gap-8 lg:gap-10 md:grid-cols-2">
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">Wie kalkulieren wir in Wien?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Grundlage sind Größe und Zugänglichkeit der Fläche, die Anzahl der Räume sowie das
-          gewünschte Zeitfenster. Daraus leiten wir Teamstärke und Dauer ab. Sie erhalten
-          eine kompakte, verständliche Zusage – ohne Kleingedrucktes und mit realistischen Zeiten.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>Objektgröße & Anzahl der zu bearbeitenden Bereiche</li>
-          <li>Zugänge, Stiegen, Wege & Abstellmöglichkeiten vor Ort</li>
-          <li>Abfolge der Schritte und gewünschte Prioritäten</li>
-          <li>Terminfenster und Hausregeln der Liegenschaft</li>
-        </ul>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">Was beeinflusst den Aufwand?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Enge Stiegenhäuser, lange Wege im Hof, beschränkte Zufahrten oder fixe Ruhezeiten
-          können den Ablauf verlängern. Wir planen das vorab ein und stimmen Fahrzeuge, Team
-          und Reihenfolge so ab, dass der Tag für Sie gut planbar bleibt.
-        </p>
-        <p className="mt-4 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wichtig ist eine kurze Vor-Ort-Sichtung: Sie dauert meist nicht lang, schafft aber
-          Sicherheit bei Termin und Umfang – und erspart Überraschungen am Durchführungstag.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8 md:col-span-2"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">So bekommen Sie eine verlässliche Zusage</h3>
-        <ol className="mt-3 space-y-3 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>1) Kontaktaufnahme:</span>{" "}
-            Kurze Abstimmung per Telefon, WhatsApp oder E-Mail und Terminvereinbarung in Wien.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>2) Besichtigung:</span>{" "}
-            Wir sehen uns die Fläche an, klären Zugänge und priorisieren die Schritte.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>3) Schriftliche Bestätigung:</span>{" "}
-            Sie erhalten eine klare Zusage mit Fixtermin, Umfang und verständlicher Beschreibung des Ablaufs.
-          </li>
-        </ol>
-
-        {/* Kontaktabschluss ohne Icons */}
-        <div
-          className="mt-6 rounded-2xl p-5 md:p-6 text-center"
-          style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22` }}
-        >
-          <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-            Unverbindliche Einschätzung in Wien gewünscht? Schreiben Sie an{" "}
-            <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-            oder rufen Sie direkt an:{" "}
-            <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-            Auch per WhatsApp möglich:{" "}
-            <a
-              className="underline"
-              href="https://wa.me/436765055437"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +43&nbsp;676&nbsp;505&nbsp;54&nbsp;37
-            </a>.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-{/* SECTION 5: Preisübersicht – Entrümpelungen • Verlassenschaften • Messie */}
-<section
-  aria-label="Preisübersicht Entrümpelung Wien"
-  className="relative"
-  style={{
+  {/* Dekor */}
+  <div
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
       backgroundImage: `
-        radial-gradient(120rem 60rem at 10% -10%, rgba(217,117,0,.12), transparent),
-        radial-gradient(90rem 50rem at 110% 30%, rgba(217,117,0,.10), transparent),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.98))
+        radial-gradient(60rem 28rem at 0% 10%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(60rem 28rem at 100% 90%, #E7EBEE33 0%, transparent 60%)
       `,
     }}
->
+  />
 
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">Preisübersicht</h2>
-      <h3 className="mt-2 text-base md:text-lg font-semibold">Entrümpelungen • Verlassenschaften • Messie</h3>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Damit Sie früh ein Gefühl für den Rahmen bekommen: Nachstehend finden Sie{" "}
-        Richtwerte für Wien. Die tatsächlichen Kosten ergeben sich aus Lage, Zugängen
-        und Zeitfenster. Verbindlich wird es nach einer kurzen, kostenlosen Besichtigung
-        mit klarer Zusage und Fixtermin.
-      </p>
-    </header>
-
-    {/* Table Card */}
-    <div
-      className="rounded-3xl shadow-sm overflow-hidden"
-      style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-    >
-      {/* Kopfzeile */}
-      <div
-        className="px-6 py-4 md:px-8 md:py-6 border-b text-center"
-        style={{ borderColor: `${BRAND.gray}22`, background: `${BRAND.accent}0F` }}
-      >
-        <span className="font-bold text-lg md:text-xl" style={{ color: BRAND.black }}>
-          Richtpreise nach Objekt und Umfang
-        </span>
-      </div>
-
-      {/* Responsive Wrapper */}
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm md:text-base">
-          <thead>
-            <tr style={{ borderBottom: `1px solid ${BRAND.gray}22` }}>
-              <th className="py-4 px-6 text-left align-bottom">Objekt / Umfang</th>
-              <th className="py-4 px-6 text-right align-bottom">wenig Hausrat</th>
-              <th className="py-4 px-6 text-right align-bottom">normaler Hausrat</th>
-              <th className="py-4 px-6 text-right align-bottom">viel Hausrat</th>
-              <th className="py-4 px-6 text-right align-bottom">Messie</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Keller", "ab € 199,–", "ab € 399,–", "ab € 699,–", "ab € 899,–"],
-              ["kleine Wohnung", "ab € 699,–", "ab € 1.399,–", "ab € 1.799,–", "ab € 2.149,–"],
-              ["große Wohnung", "ab € 1.149,–", "ab € 1.699,–", "ab € 2.349,–", "ab € 3.449,–"],
-              ["Haus", "ab € 899,–", "ab € 2.149,–", "ab € 3.449,–", "ab € 3.949,–"],
-            ].map((row, idx) => (
-              <tr key={idx} style={{ borderBottom: `1px solid ${BRAND.gray}15` }}>
-                <td className="py-4 px-6 font-medium">{row[0]}</td>
-                <td className="py-4 px-6 text-right">{row[1]}</td>
-                <td className="py-4 px-6 text-right">{row[2]}</td>
-                <td className="py-4 px-6 text-right">{row[3]}</td>
-                <td className="py-4 px-6 text-right">{row[4]}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Fußzeile */}
-      <div className="px-6 py-5 md:px-8 md:py-6 border-t" style={{ borderColor: `${BRAND.gray}22` }}>
-        <p className="text-sm md:text-base" style={{ color: BRAND.gray }}>
-          ★ Alle Preise verstehen sich als <em>Ab-Preise</em>. Verbindliche Angebote nach kostenloser
-          Besichtigung vor Ort in Wien. Für eine Kurzabstimmung:{" "}
-          <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-          oder telefonisch/WhatsApp:{" "}
-          <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.
-        </p>
-      </div>
-    </div>
-
-    {/* Kleiner Hinweis unter der Tabelle */}
-    <p className="mt-6 text-sm md:text-base text-center" style={{ color: BRAND.gray }}>
-      Hinweis: Änderungen der Richtwerte sind möglich. Maßgeblich ist die schriftliche Zusage nach Besichtigung.
-    </p>
-  </div>
-</section>
-{/* SECTION 6: Entrümpelung Wien Kontakt */}
-<section aria-label="Entrümpelung Wien Kontakt" className="relative">
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">
-        Entrümpelung Wien – Kontakt
+  <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Experten-Tipps zur Entrümpelung in Baden
       </h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Persönlich, verlässlich und ohne Umwege: Wir melden uns rasch zurück und stimmen den
-        ersten Termin in Wien kurz mit Ihnen ab. Auf Wunsch erhalten Sie noch am selben Tag
-        eine Bestätigung mit Fixtermin und den nächsten Schritten.
+      <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Mit guter Vorbereitung sparen Sie Zeit und Nerven. Unsere Empfehlungen basieren
+        auf über 20 Jahren Erfahrung in Baden & Umgebung – klar, praxistauglich und
+        direkt umsetzbar.
       </p>
     </header>
 
-    <div className="grid gap-8 lg:gap-10 md:grid-cols-2">
-      {/* Linke Spalte: Wege der Kontaktaufnahme */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">So erreichen Sie uns</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Am schnellsten klappt’s telefonisch oder per Nachricht. Teilen Sie uns kurz Adresse,
-          gewünschtes Zeitfenster und Besonderheiten im Haus mit. Wir schlagen Ihnen den
-          nächstmöglichen Termin für eine kostenlose Besichtigung in Wien vor.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li><strong>Telefon:</strong> <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a></li>
-          <li><strong>E-Mail:</strong> <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a></li>
-          <li>
-            <strong>WhatsApp:</strong>{" "}
-            <a
-              className="underline"
-              href="https://wa.me/436765055437"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +43&nbsp;676&nbsp;505&nbsp;54&nbsp;37
-            </a>
-          </li>
-        </ul>
-
-        <p className="mt-4 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Tipp: Ein bis zwei Handyfotos der Räume helfen uns, Teamgröße und Ablauf noch genauer
-          einzuschätzen. Das spart Zeit bei der Besichtigung.
-        </p>
-      </article>
-
-      {/* Rechte Spalte: Reaktionszeit & Ablauf nach Kontakt */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{
-          background: BRAND.white,
-          border: `1px solid ${BRAND.gray}22`,
-          boxShadow: "0 18px 40px rgba(0,0,0,.05)",
-        }}
-      >
-        <h3 className="text-xl font-bold">Was passiert nach Ihrer Nachricht?</h3>
-        <ol className="mt-3 space-y-3 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>1) Rückruf oder Antwort:</span>{" "}
-            Wir melden uns zeitnah mit Terminvorschlägen für die Kurzbesichtigung.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>2) Vor-Ort-Sichtung:</span>{" "}
-            Wir klären Zugänge, Wege und Reihenfolge der Schritte – kompakt und ohne Formalitäten.
-          </li>
-          <li>
-            <span className="font-semibold" style={{ color: BRAND.black }}>3) Schriftliche Zusage:</span>{" "}
-            Sie erhalten eine klare Bestätigung mit Fixtermin und einer verständlichen Beschreibung des Ablaufs.
-          </li>
-        </ol>
-
-        {/* Kontakt-CTA (ohne Icons) */}
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
-          <a
-            href="tel:+436765055437"
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold shadow-sm transition hover:opacity-95"
-            style={{ background: BRAND.accent, color: BRAND.white }}
-          >
-            Anrufen
-          </a>
-          <a
-            href="https://wa.me/436765055437"
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold border transition"
-            style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-          <a
-            href="mailto:office@raumfrei-wien.at?subject=Anfrage%20Entr%C3%BCmpelung%20Wien"
-            className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold border transition"
-            style={{ borderColor: `${BRAND.gray}55`, color: BRAND.black }}
-          >
-            E-Mail
-          </a>
-        </div>
-      </article>
-    </div>
-
-    {/* Abschlusszeile */}
-    <div
-      className="mt-12 rounded-3xl p-6 md:p-8 text-center"
-      style={{
-        background: BRAND.white,
-        border: `1px solid ${BRAND.gray}22`,
-        boxShadow: "0 10px 28px rgba(0,0,0,.06)",
-      }}
-    >
-      <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-        Kurzberatung oder direkter Terminvorschlag? Schreiben Sie an{" "}
-        <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-        oder rufen Sie an:{" "}
-        <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-        Auf Wunsch bestätigen wir Ihren Termin noch heute schriftlich.
-      </p>
-    </div>
-  </div>
-</section>
-{/* SECTION 7: Ablauf Entrümpelung Wien */}
-<section aria-label="Ablauf Entrümpelung Wien" className="relative"
-style={{
-      backgroundImage: `
-        radial-gradient(120rem 60rem at 10% -10%, rgba(217,117,0,.12), transparent),
-        radial-gradient(90rem 50rem at 110% 30%, rgba(217,117,0,.10), transparent),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.98))
-      `,
-    }}
->
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">Ablauf Entrümpelung Wien</h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Ein klarer Ablauf nimmt den Druck raus. Wir stimmen alles kurz ab, kommen zur Besichtigung
-        und halten die vereinbarten Schritte fix ein – damit der Tag für Sie planbar bleibt und die
-        Übergabe auf Anhieb passt.
-      </p>
-    </header>
-
-    <div className="grid gap-8 lg:gap-10 md:grid-cols-2">
-      {/* 1) Vorbereitung & Erstkontakt */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Vorbereitung & Erstkontakt</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Rufen Sie kurz an oder schreiben Sie uns eine Nachricht. Teilen Sie Adresse,
-          ein gewünschtes Zeitfenster und – falls vorhanden – ein, zwei Handyfotos der Räume.
-          Wir melden uns zeitnah mit Terminvorschlägen für eine kostenlose Kurzbesichtigung in Wien.
-        </p>
-        <p className="mt-4 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Praktisch: Wenn Hausverwaltung oder Nachbar:innen über Zeitfenster informieren müssen,
-          sagen Sie uns kurz Bescheid – wir richten den Plan danach aus.
-        </p>
-      </article>
-
-      {/* 2) Vor-Ort-Besichtigung */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Vor-Ort-Besichtigung</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wir sehen uns Zugänge, Stiegen, Wege im Hof und die Reihenfolge der Bereiche an.
-          Daraus ergeben sich Teamstärke und Dauer. Sie bekommen eine klare, schriftliche
-          Bestätigung mit Fixtermin und einem verständlichen Ablaufplan.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>Übersicht über Räume und Prioritäten</li>
-          <li>Abstimmung von Startzeit und Reihenfolge</li>
-          <li>Kontaktweg am Durchführungstag (Telefon/WhatsApp)</li>
-        </ul>
-      </article>
-
-      {/* 3) Durchführung & Übergabe */}
-      <article
-        className="rounded-3xl p-6 md:p-8 md:col-span-2"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Durchführung & Übergabe</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Am Termin arbeiten wir ruhig und zügig nach Plan. Zwischenstände stimmen wir kurz ab,
-          auf Wunsch auch telefonisch. Zum Schluss folgt eine gemeinsame Begehung – Sie prüfen,
-          ob alles wie besprochen umgesetzt wurde, und erhalten auf Wunsch eine kurze Bestätigung.
-        </p>
-        <p className="mt-4 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wenn während der Arbeiten Stücke auffallen, die Ihnen wichtig sind oder die man gut
-          weitergeben kann, sprechen wir das offen an. So bleiben Entscheidungen transparent und
-          der Tag verläuft ohne Umwege.
-        </p>
-
-        {/* Kontaktabschluss (ohne Icons) */}
+    {/* Raster der Tipps */}
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Frühzeitig Termine fixieren",
+          text: "Sichern Sie sich Ihren Wunschslot. Je früher abgestimmt, desto reibungsloser verläuft die Durchführung.",
+        },
+        {
+          title: "Zugänge & Parken klären",
+          text: "Hauszugang, Stiegenhaus, Lift und Parkmöglichkeit kurz prüfen. Ein reservierter Platz spart viel Zeit.",
+        },
+        {
+          title: "Wertsachen separat halten",
+          text: "Dokumente, Schlüssel, Schmuck und Erinnerungsstücke vorab beiseitelegen – so bleibt alles im Blick.",
+        },
+        {
+          title: "Fotos vorab senden",
+          text: "Kurze Fotodoku per WhatsApp hilft bei der Einschätzung. Dadurch erhalten Sie rasch ein passgenaues Angebot.",
+        },
+        {
+          title: "Fixpreis nach Besichtigung",
+          text: "Vor Ort entsteht ein verbindliches Angebot. Transparent, klar formuliert und ohne Überraschungen.",
+        },
+        {
+          title: "Wertanrechnung nutzen",
+          text: "Geeignete Stücke werden fair bewertet und im Angebot angerechnet – das senkt die Gesamtkosten.",
+        },
+        {
+          title: "Zeitfenster planen",
+          text: "Blocken Sie am Durchführungstag ein realistisches Zeitfenster für Schlüsselübergabe und Abnahme.",
+        },
+        {
+          title: "Nach der Übergabe",
+          text: "Nach Abschluss kurz durchgehen: Zählerstände, Fotos der Räume und finales Häkchen bei der Abnahme.",
+        },
+        {
+          title: "Wochenend-Option",
+          text: "Bei Bedarf sind Einsätze am Wochenende nach Vereinbarung möglich – einfach bei der Anfrage erwähnen.",
+        },
+      ].map((item) => (
         <div
-          className="mt-6 rounded-2xl p-5 md:p-6 text-center"
-          style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22` }}
+          key={item.title}
+          className="rounded-2xl border border-[#E8E1D9] bg-white p-6 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
         >
-          <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-            Fragen zum Ablauf oder Termin sichern? Schreiben Sie an{" "}
-            <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-            oder rufen Sie an:{" "}
-            <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-            WhatsApp:{" "}
-            <a
-              className="underline"
-              href="https://wa.me/436765055437"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +43&nbsp;676&nbsp;505&nbsp;54&nbsp;37
-            </a>.
-          </p>
+          <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full"
+               style={{ background: "#CBB47B22", color: "#7A5C3A", border: "1px solid #E8E1D9" }}>
+            {/* dezentes Icon (Check) */}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z"/>
+            </svg>
+          </div>
+          <h3 className="text-[18px] font-semibold text-[#2B3A42]">{item.title}</h3>
+          <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">{item.text}</p>
         </div>
-      </article>
+      ))}
+    </div>
+
+    {/* Microcopy + CTA */}
+    <div className="mt-10 flex flex-wrap items-center gap-4">
+      <span className="text-sm text-[#6B7280]">
+        Tipp: Mit einer kurzen Fotodoku und klaren Eckdaten erhalten Sie besonders schnell ein Fixpreis-Angebot.
+      </span>
+      <a
+        href="https://wa.me/436767202623"
+        className="ml-auto rounded-xl bg-[#7A5C3A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        WhatsApp – kostenlose Besichtigung
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
     </div>
   </div>
-</section>
-{/* SECTION 8: Wie funktioniert Entrümpelung Wien */}
-<section aria-label="Wie funktioniert Entrümpelung Wien" className="relative">
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">Wie funktioniert Entrümpelung in Wien?</h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Kurz, klar und alltagstauglich: So läuft eine Entrümpelung in Wien ab, wenn man’s pragmatisch
-        angeht. Wenige gute Absprachen, ein fixer Fahrplan und eine Ansprechperson – mehr braucht es nicht,
-        damit der Tag ruhig und planbar bleibt.
-      </p>
-    </header>
 
-    <div className="grid gap-8 lg:gap-10 md:grid-cols-2">
-      {/* Vorbereitung & Rahmen */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Vorbereitung – wenig Aufwand, große Wirkung</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Ein kurzer Anruf oder eine Nachricht genügt. Teilen Sie Adresse, gewünschte Zeitfenster
-          und – wenn vorhanden – ein, zwei Handyfotos der Räume. Daraus entsteht ein realistischer
-          Rahmen: Startzeit, Reihenfolge der Bereiche und die passende Teamstärke.
-        </p>
-        <p className="mt-4 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Praktischer Tipp: Wenn es Hausregeln oder Ruhezeiten gibt, geben Sie uns das gleich durch.
-          So können wir Wege, Parkmöglichkeiten und Startzeit exakt abstimmen.
-        </p>
-      </article>
-
-      {/* Durchführung in Wien */}
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Durchführung – strukturiert & verlässlich</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Am Termin arbeiten wir ruhig und zügig nach dem vereinbarten Plan. Zwischenstände klären wir
-          kurz – telefonisch, wenn Sie nicht vor Ort sind. Zum Schluss folgt eine gemeinsame Begehung,
-          damit die Übergabe auf Anhieb passt.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm md:text-base" style={{ color: BRAND.gray }}>
-          <li>Fixer Start, klare Reihenfolge der Bereiche</li>
-          <li>Kurze Abstimmungen statt endloser Mails</li>
-          <li>Eine Ansprechperson für alle Fragen</li>
-        </ul>
-      </article>
-
-      {/* Feinheiten & Entscheidungen */}
-      <article
-        className="rounded-3xl p-6 md:p-8 md:col-span-2"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Feinheiten – was unterwegs entschieden wird</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wenn während der Arbeiten Gegenstände auffallen, die Ihnen wichtig sind oder die sich
-          weitergeben lassen, sprechen wir das offen an. Entscheidungen bleiben transparent, der
-          Ablauf ohne Umwege. Auf Wunsch dokumentieren wir Zwischenschritte kurz am Telefon.
-        </p>
-
-        {/* Abschluss-CTA ohne иконок */}
-        <div
-          className="mt-6 rounded-2xl p-5 md:p-6 text-center"
-          style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22` }}
-        >
-          <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-            Möchten Sie klären, wie das bei Ihrer Adresse in Wien am besten funktioniert?
-            Schreiben Sie an{" "}
-            <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-            oder rufen Sie an:{" "}
-            <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-            Auch per WhatsApp erreichbar:{" "}
-            <a
-              className="underline"
-              href="https://wa.me/436765055437"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +43&nbsp;676&nbsp;505&nbsp;54&nbsp;37
-            </a>.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-{/* SECTION 9: FAQ Entrümpelung Wien */}
-<section aria-label="FAQ Entrümpelung Wien" className="relative">
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">FAQ – Entrümpelung Wien</h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Kurze, klare Antworten aus der Praxis in Wien. Wenn etwas Spezielles ansteht,
-        melden Sie sich einfach – wir klären das in wenigen Minuten telefonisch.
-      </p>
-    </header>
-
-    <div className="grid gap-8">
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Wie schnell bekomme ich einen Termin in Wien?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Meist kurzfristig. Nach Ihrer Nachricht schlagen wir zeitnah eine kostenlose Kurzbesichtigung vor
-          und bestätigen im Anschluss einen Fixtermin mit klaren Schritten – ohne Wartezeiten.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Muss ich am Durchführungstag anwesend sein?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Nicht zwingend. Viele Kund:innen übergeben vorab einen Schlüssel und bekommen kurze Updates.
-          Zum Abschluss gibt’s eine gemeinsame Begehung oder – wenn gewünscht – eine kurze Bestätigung.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Wie entsteht die Kosteneinschätzung?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Grundlage sind Größe und Zugänglichkeit der Fläche, die Anzahl der Bereiche sowie Ihr Zeitfenster.
-          Nach einer kurzen Vor-Ort-Sichtung erhalten Sie eine klare, schriftliche Zusage mit Fixtermin.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Könnt ihr erhaltenswerte Stücke übernehmen?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Ja. Wir sprechen das offen an, geben eine ehrliche Einschätzung und zeigen Möglichkeiten der Weitergabe.
-          Auf Wunsch kombinieren wir das mit dem vereinbarten Ablauf – alles aus einer Hand.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Was, wenn es Hausregeln oder fixe Zeitfenster gibt?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Sagen Sie uns das bitte gleich bei der Terminvereinbarung. Wir richten Startzeit, Reihenfolge
-          und Wege danach aus – damit alles ruhig und planbar bleibt.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">Wie läuft die Kommunikation am Tag selbst?</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Eine Ansprechperson hält Sie auf Wunsch kurz am Laufenden – telefonisch oder via Nachricht.
-          Zwischenstände stimmen wir kompakt ab, die Übergabe erfolgt nach gemeinsamer Begehung.
-        </p>
-      </article>
-    </div>
-
-    {/* Abschluss-CTA ohne Icons */}
-    <div
-      className="mt-12 rounded-3xl p-6 md:p-8 text-center"
-      style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 10px 28px rgba(0,0,0,.06)" }}
-    >
-      <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-        Weitere Fragen? Schreiben Sie uns an{" "}
-        <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-        oder rufen Sie direkt an:{" "}
-        <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-        Auf Wunsch erhalten Sie noch heute Terminvorschläge für eine Kurzbesichtigung in Wien.
-      </p>
-    </div>
-  </div>
-</section>
-{/* SECTION 10: Experten-Tipps Entrümpelung Wien */}
-<section
-  aria-label="Preisübersicht Entrümpelung Wien"
-  className="relative"
-  style={{
-      backgroundImage: `
-        radial-gradient(120rem 60rem at 10% -10%, rgba(217,117,0,.12), transparent),
-        radial-gradient(90rem 50rem at 110% 30%, rgba(217,117,0,.10), transparent),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.98))
-      `,
-    }}
->
-  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8 py-16 md:py-24">
-    <header className="mb-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-extrabold">Experten-Tipps zur Entrümpelung in Wien</h2>
-      <p
-        className="mt-4 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-        style={{ color: BRAND.gray }}
-      >
-        Aus dem Wiener Alltag: einfache, praxistaugliche Hinweise, die den Ablauf spürbar erleichtern –
-        von der Vorbereitung bis zur Übergabe.
-      </p>
-    </header>
-
-    <div className="grid gap-8 lg:gap-10 md:grid-cols-2">
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">1) Prioritätenliste vorab festlegen</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Notieren Sie kurz, welche Räume oder Zonen zuerst dran sind (z. B. Schlafzimmer, Abstellraum, Kellerabteil).
-          Eine kleine Liste spart Rückfragen und hält den Tag im Takt – besonders in Häusern mit fixen Zeitfenstern.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">2) Hauszugang & Stellplätze klären</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Ein kurzer Hinweis zu Zufahrt, Innenhof oder Ladezone hilft enorm. Wenn ein Platz reserviert werden kann,
-          läuft alles kompakter – weniger Wege, kürzere Zeiten, entspannter Ablauf.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">3) Wichtige Stücke sichtbar markieren</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Dinge, die auf jeden Fall bleiben sollen, am besten mit einem Zettel kennzeichnen oder separat ablegen.
-          So bleibt alles eindeutig und der Ablauf ohne Verzögerungen.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">4) Zwei, drei Handyfotos reichen</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Ein schneller Eindruck vorab hilft bei Teamgröße und Reihenfolge. Fotos von Zugängen, Stiegen oder Hofwegen
-          sind besonders wertvoll, wenn es enger zugeht.
-        </p>
-      </article>
-
-      <article
-        className="rounded-3xl p-6 md:p-8 md:col-span-2"
-        style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22`, boxShadow: "0 18px 40px rgba(0,0,0,.05)" }}
-      >
-        <h3 className="text-xl font-bold">5) Entscheidungen unterwegs kurz halten</h3>
-        <p className="mt-3 text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-          Wenn während der Arbeiten Fragen auftauchen, klären wir das in einem kurzen Telefonat.
-          So bleibt der Ablauf flüssig und Sie behalten jederzeit den Überblick.
-        </p>
-
-        {/* Abschluss-CTA ohne Icons */}
-        <div
-          className="mt-6 rounded-2xl p-5 md:p-6 text-center"
-          style={{ background: BRAND.white, border: `1px solid ${BRAND.gray}22` }}
-        >
-          <p className="text-sm md:text-base leading-relaxed" style={{ color: BRAND.gray }}>
-            Sie möchten Ihre Situation in Wien kurz durchgehen? Schreiben Sie an{" "}
-            <a className="underline" href="mailto:office@raumfrei-wien.at">office@raumfrei-wien.at</a>{" "}
-            oder rufen Sie direkt an:{" "}
-            <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.{" "}
-            Auch per WhatsApp möglich:{" "}
-            <a
-              className="underline"
-              href="https://wa.me/436765055437"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +43&nbsp;676&nbsp;505&nbsp;54&nbsp;37
-            </a>.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
+  {/* sanfter Abschluss */}
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FDFBF9] to-transparent" />
 </section>
 
 
@@ -1190,6 +1122,8 @@ style={{
 
 
 
-    </main>
+
+
+    </>
   );
 }
