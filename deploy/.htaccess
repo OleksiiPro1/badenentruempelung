@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+
+# Отдаём существующие файлы/папки как есть
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Кастомная 404
+ErrorDocument 404 /404.html
+
+# Всё, чего нет на диске → 404 (запустит ErrorDocument)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [R=404,L]

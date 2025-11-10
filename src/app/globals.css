@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Отключаем автоматическую тёмную тему на всех устройствах */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  img, picture, video {
+    filter: none !important;
+  }
+}
+
+/* Принудительно фиксируем светлую тему */
+html {
+  color-scheme: light !important;
+  background-color: #ffffff !important;
+}
+
+body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+
+/* Не растягивать emoji из WordPress */
+img.emoji,
+img[src*="s.w.org/images/core/emoji"] {
+  width: 1em;      /* или 16px */
+  height: 1em;     /* или 16px */
+  max-width: none; 
+  display: inline-block;
+  vertical-align: -0.15em; /* чтобы ровно сидели в тексте */
+  object-fit: contain;
+}
+
+/* Если у вас есть универсальное правило img { width:100% } — исключим emoji */
+img:not(.emoji) {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/* Базовая типографика */
+.wp-doc { 
+  line-height: 1.65;
+}
+
+/* Отступ между любыми соседними элементами-«абзацами» */
+.wp-doc > * + * {
+  margin-top: 0.8rem;       /* можно 0.6–1rem по вкусу */
+}
+
+/* Чуть больший отступ перед заголовками */
+.wp-doc h2 { margin-top: 1.4rem; }
+.wp-doc h3 { margin-top: 1.1rem; }
+
+/* Списки */
+.wp-doc ul, .wp-doc ol { 
+  margin-left: 1.2rem; 
+}
+
+/* НЕ растягивать emoji из WordPress */
+.wp-doc img.emoji,
+.wp-doc img[src*="s.w.org/images/core/emoji"] {
+  width: 1em;
+  height: 1em;
+  max-width: none;
+  display: inline-block;
+  vertical-align: -0.15em;
+  object-fit: contain;
+}
+
+/* Глобальные картинки — адаптивно, но без влияния на emoji */
+.wp-doc img:not(.emoji) {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {overflow-x:hidden;}
+
+
+
+
+
+
+
+
+
+
+
