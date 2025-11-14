@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Persönliche Begleitung, klare Abläufe und pünktliche Durchführung in Baden & Umgebung. Unverbindliche Besichtigung, Fixtermine, saubere Übergabe.",
     images: [
-      { url: "/images/og-ueber-uns-baden.webp", width: 1200, height: 630, alt: "Über uns – Baden Entrümpelung" },
+      { url: "/images/ueber-uns.webp", width: 1200, height: 630, alt: "Über uns – Baden Entrümpelung" },
     ],
     locale: "de_AT",
     siteName: "Baden Entrümpelung",
@@ -111,7 +111,7 @@ export default function UeberUnsPage() {
             {/* Bildbereich */}
             <figure className="overflow-hidden rounded-2xl border bg-white order-first md:order-last" style={{ borderColor: SECONDARY }}>
               <Image
-                src="/images/ueber-uns-baden.webp"
+                src="/images/ueber-uns.webp"
                 alt="Team bei einer Entrümpelung in Baden"
                 width={600}
                 height={400}

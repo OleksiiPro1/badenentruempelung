@@ -116,7 +116,7 @@ export default function FirmenaufloesungBadenPage() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl border border-[#E8E1D9] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.10)]">
                 <Image
-                  src="/images/firmenaufloesung-baden.jpg"
+                  src="/images/firmenaufloesung-baden.webp"
                   alt="Team bei der professionellen Firmenauflösung in einem Büro in Baden"
                   width={600}
                   height={420}
@@ -747,6 +747,67 @@ export default function FirmenaufloesungBadenPage() {
 
   </div>
 </section>
+
+{/* ===== SEKTION 5: Preisübersicht Baden ===== */}
+<section
+  id="preisuebersicht-baden"
+  className="relative overflow-hidden bg-[#FAFAFA] py-1 md:py10"
+  aria-label="Preisübersicht Baden"
+>
+  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
+    <header className="mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Preisübersicht Baden
+      </h2>
+      
+    </header>
+
+    {/* Tabelle */}
+    <div className="overflow-hidden rounded-2xl border border-[#E8E1D9] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.05)]">
+      <table className="w-full text-left text-sm md:text-base text-[#3A2E25]">
+        <thead className="bg-[#F7F5F2] text-[#2B3A42]">
+          <tr>
+            <th className="px-5 py-4 font-semibold">Objekt / Umfang</th>
+            <th className="px-5 py-4 font-semibold">wenig Hausrat</th>
+            <th className="px-5 py-4 font-semibold">normaler Hausrat</th>
+            <th className="px-5 py-4 font-semibold">viel Hausrat</th>
+            <th className="px-5 py-4 font-semibold">Messie</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["Keller", "ab €195", "ab €395", "ab €695", "ab €895"],
+            ["kleine Wohnung", "ab €695", "ab €1.395", "ab €1.795", "ab €2.145"],
+            ["große Wohnung", "ab €1.145", "ab €1.695", "ab €2.345", "ab €3.445"],
+            ["Haus", "ab €895", "ab €2.145", "ab €3.445", "ab €3.945"],
+            ["Dachboden", "ab €495", "ab €795", "ab €1.095", "ab €1.595"],
+            ["Garage", "ab €245", "ab €445", "ab €695", "ab €895"],
+            ["Lagerraum", "ab €295", "ab €495", "ab €795", "ab €1.095"],
+            ["Büro / Geschäft", "ab €745", "ab €1.295", "ab €1.795", "ab €2.495"],
+            
+          ].map(([obj, low, mid, high, messie]) => (
+            <tr
+              key={obj}
+              className="border-t border-[#E8E1D9] hover:bg-[#FAF9F7]/70 transition"
+            >
+              <td className="px-5 py-4 font-medium">{obj}</td>
+              <td className="px-5 py-4">{low}</td>
+              <td className="px-5 py-4">{mid}</td>
+              <td className="px-5 py-4">{high}</td>
+              <td className="px-5 py-4 text-[#CBB47B] font-semibold">{messie}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    
+  </div>
+
+  {/* Dekor unten */}
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+</section>
+
 {/* ===== SEKTION: Praxisbeispiele aus Baden ===== */}
 <section
   id="praxisbeispiele-firmenaufloesung-baden"
@@ -1276,7 +1337,7 @@ export default function FirmenaufloesungBadenPage() {
         <a
           href="https://wa.me/436767202623"
           target="_blank"
-          className="w-full max-w-[260px] bg-[#25D366] text-white rounded-xl py-3 text-sm font-semibold shadow-md transition hover:opacity-90"
+          className="w-full max-w-[260px] bg-[#CBB47B] text-white rounded-xl py-3 text-sm font-semibold shadow-md transition hover:opacity-90"
         >
           WhatsApp Nachricht
         </a>

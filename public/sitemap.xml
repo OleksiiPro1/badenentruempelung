@@ -1,61 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Basis -->
+
+  <!-- Basis-Seiten -->
   <url>
-    <loc>https://raumfrei-wien.at/</loc>
+    <loc>https://badenentruempelung.at/</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/leistungen</loc>
+    <loc>https://badenentruempelung.at/leistungen</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/ueber-uns</loc>
+    <loc>https://badenentruempelung.at/ueber-uns</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/impressum</loc>
-    <lastmod>2025-11-06</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://raumfrei-wien.at/datenschutz</loc>
+    <loc>https://badenentruempelung.at/impressum</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.6</priority>
   </url>
 
-  <!-- Leistungen (6 Services) -->
+  <!-- Leistungen (6 Services aus deinem /uslugi Ordner) -->
+
   <url>
-    <loc>https://raumfrei-wien.at/dachboden-raeumung-wien</loc>
+    <loc>https://badenentruempelung.at/dachboden-raeumung-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/kellerentruempelung-wien</loc>
+    <loc>https://badenentruempelung.at/entruempelung-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/verlassenschaften-wien</loc>
+    <loc>https://badenentruempelung.at/firmenaufloesung-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/firmenaufloesung-wien</loc>
+    <loc>https://badenentruempelung.at/kellerentruempelung-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/entruempelungsfirma-wien</loc>
+    <loc>https://badenentruempelung.at/raeumung-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://raumfrei-wien.at/raeumung-wien</loc>
+    <loc>https://badenentruempelung.at/verlassenschaft-baden</loc>
     <lastmod>2025-11-06</lastmod>
     <priority>0.9</priority>
   </url>
+
 </urlset>

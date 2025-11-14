@@ -6,7 +6,7 @@ const OUT_DIR = path.resolve("out");
 const HTACCESS = path.join(OUT_DIR, ".htaccess");
 const HTACCESS_TXT = path.join(OUT_DIR, "htaccess.txt"); // запасной вариант для загрузки
 
-const DOMAIN = "raumfrei-wien.at";
+const DOMAIN = "badenentruempelung.at";
 
 const CONTENT = `# ===============================
 # .htaccess für ${DOMAIN}

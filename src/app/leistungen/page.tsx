@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Baden Entrümpelung: Leistungen in Baden & Umgebung – Entrümpelungen, Räumungen, Verlassenschaften, Firmenauflösung, Keller & Dachboden. Fixtermine, klare Abläufe, persönliche Begleitung.",
     images: [
-      { url: "/images/og-leistungen-baden.webp", width: 1200, height: 630, alt: "Baden Entrümpelung – Leistungen" },
+      { url: "/images/leistungen-messie.webp", width: 1200, height: 630, alt: "Baden Entrümpelung – Leistungen" },
     ],
     locale: "de_AT",
     siteName: "Baden Entrümpelung",
@@ -32,12 +32,12 @@ const BG_SOFT = "#E7EBEE";
 const DARK = "#1E262B";
 
 const LEISTUNGEN = [
-  { href: "/verlassenschaften-baden", label: "Verlassenschaften Baden", image: "/images/leistungen/verlassenschaften.webp", excerpt: "Einfühlsam & strukturiert – inklusive fairer Wertanrechnung geeigneter Stücke." },
-  { href: "/firmenaufloesung-baden", label: "Firmenauflösung Baden", image: "/images/leistungen/firmenaufloesung.webp", excerpt: "Planbare Räumung von Büro- und Betriebsflächen – diskret und termintreu." },
-  { href: "/raeumung-baden", label: "Räumung Baden", image: "/images/leistungen/raeumung.webp", excerpt: "Wohnung, Haus oder Teilbereiche – klarer Ablauf bis zur besenreinen Übergabe." },
-  { href: "/entruempelungsfirma-baden", label: "Entrümpelungsfirma Baden", image: "/images/leistungen/entruempelungsfirma.webp", excerpt: "Erfahrene Teams, fixe Zeitfenster, saubere Durchführung in Baden & Umgebung." },
-  { href: "/kellerentruempelung-baden", label: "Kellerentrümpelung Baden", image: "/images/leistungen/keller.webp", excerpt: "Mehr Platz im Untergeschoss – übersichtlich geplant, zügig umgesetzt." },
-  { href: "/dachboden-raeumung-baden", label: "Dachboden Räumung Baden", image: "/images/leistungen/dachboden.webp", excerpt: "Sicheres Arbeiten – auch in engen Bereichen, mit klarer Abnahme." },
+  { href: "/verlassenschaften-baden", label: "Verlassenschaften Baden", image: "/images/verlassenschaften-baden.webp", excerpt: "Einfühlsam & strukturiert – inklusive fairer Wertanrechnung geeigneter Stücke." },
+  { href: "/firmenaufloesung-baden", label: "Firmenauflösung Baden", image: "/images/firmenaufloesung-baden.webp", excerpt: "Planbare Räumung von Büro- und Betriebsflächen – diskret und termintreu." },
+  { href: "/raeumung-baden", label: "Räumung Baden", image: "/images/raeumung-baden.webp", excerpt: "Wohnung, Haus oder Teilbereiche – klarer Ablauf bis zur besenreinen Übergabe." },
+  { href: "/entruempelungsfirma-baden", label: "Entrümpelungsfirma Baden", image: "/images/entruempelungsfirma-baden.webp", excerpt: "Erfahrene Teams, fixe Zeitfenster, saubere Durchführung in Baden & Umgebung." },
+  { href: "/kellerentruempelung-baden", label: "Kellerentrümpelung Baden", image: "/images/kellerentruempelung-baden.webp", excerpt: "Mehr Platz im Untergeschoss – übersichtlich geplant, zügig umgesetzt." },
+  { href: "/dachboden-raeumung-baden", label: "Dachboden Räumung Baden", image: "/images/dachboden-raeumung-baden.webp", excerpt: "Sicheres Arbeiten – auch in engen Bereichen, mit klarer Abnahme." },
 ];
 
 function AccentButton({ href, children }: { href: string; children: React.ReactNode }) {
@@ -103,7 +103,7 @@ export default function LeistungenPage() {
           {/* HERO IMAGE */}
           <div className="hidden md:block">
             <Image
-              src="/images/hero-leistungen-baden.webp"
+              src="/images/leistungen-messie.webp"
               alt="Entrümpelung Baden – Leistungen Übersicht"
               width={600}
               height={400}
