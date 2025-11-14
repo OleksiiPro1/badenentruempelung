@@ -81,7 +81,7 @@ export default function CookieConsent() {
               damit grundlegende Funktionen dieser Website zuverlässig arbeiten
               (z.&nbsp;B. Navigation, Formular-Handling). Details finden Sie in unserer{" "}
               <a
-                href="/datenschutz"
+                href="/impressum"
                 rel="nofollow"
                 className="font-medium underline underline-offset-2 hover:opacity-90"
                 style={{ color: ACCENT, textDecorationColor: GRAY_BR }}
@@ -94,7 +94,7 @@ export default function CookieConsent() {
             {/* Кнопки */}
             <div className="flex items-center gap-2">
               <a
-                href="/datenschutz"
+                href="/impressum"
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md px-3.5 py-2 text-sm font-medium whitespace-nowrap shrink-0 leading-none transition hover:bg-gray-50"
                 style={{
