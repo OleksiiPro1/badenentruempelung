@@ -87,6 +87,7 @@ export default function FooterPremium() {
             <h3 className="mb-3 text-base font-semibold" style={{ color: PRIMARY }}>Leistungen</h3>
             <ul className="space-y-2 text-sm">
               {[
+
                 { href: "/verlassenschaften-baden", label: "Verlassenschaften Baden" },
                 { href: "/firmenaufloesung-baden", label: "Firmenauflösung Baden" },
                 { href: "/raeumung-baden", label: "Räumung Baden" },
@@ -113,8 +114,8 @@ export default function FooterPremium() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: "/", label: "Startseite" },
+                { href: "/leistungen", label: "Leistungen Baden" },
                 { href: "/ueber-uns", label: "Über uns" },
-                { href: "/datenschutz", label: "Datenschutz" },
                 { href: "/impressum", label: "Impressum" },
               ].map((l) => (
                 <li key={l.href}>

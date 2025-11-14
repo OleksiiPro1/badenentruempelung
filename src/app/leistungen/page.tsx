@@ -1,219 +1,241 @@
-// app/leistungen/page.tsx
+// app/leistungen/page.tsx — Baden Entrümpelung mit Bildern
 import Link from "next/link";
-import Leistungen from "../components/Leistungen";
+import Image from "next/image";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title:
-    "Leistungen in Wien – Entrümpelung & Räumungen | raumfrei-wien.at",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://badenentruempelung.at"),
+  title: "Leistungen in Baden – Entrümpelung & Räumungen | badenentruempelung.at",
   description:
-    "Raumfrei Wien: Leistungen in ganz Wien – Entrümpelung, Wohnungs- und Hausräumungen sowie Verlassenschaften. Klare Abläufe, Fixtermine, persönliche Begleitung.",
+    "Baden Entrümpelung: Leistungen in Baden & Umgebung – Entrümpelungen, Räumungen, Verlassenschaften, Firmenauflösung, Keller & Dachboden. Fixtermine, klare Abläufe, persönliche Begleitung.",
+  alternates: { canonical: "/leistungen" },
+  openGraph: {
+    type: "website",
+    url: "https://badenentruempelung.at/leistungen",
+    title: "Leistungen in Baden – Entrümpelung & Räumungen | badenentruempelung.at",
+    description:
+      "Baden Entrümpelung: Leistungen in Baden & Umgebung – Entrümpelungen, Räumungen, Verlassenschaften, Firmenauflösung, Keller & Dachboden. Fixtermine, klare Abläufe, persönliche Begleitung.",
+    images: [
+      { url: "/images/og-leistungen-baden.webp", width: 1200, height: 630, alt: "Baden Entrümpelung – Leistungen" },
+    ],
+    locale: "de_AT",
+    siteName: "Baden Entrümpelung",
+  },
+  robots: { index: true, follow: true },
 };
 
-// Brand palette (Raumfrei Wien)
-const BRAND     = "#D97500"; // акцент (rgb(217,117,0))
-const BLACK     = "#000000";
-const WHITE     = "#FFFFFF";
-const GRAY_TXT  = "#6B7280";
-const GRAY_BR   = "#D1D5DB";
+const PRIMARY = "#2B3A42";
+const SECONDARY = "#A7A9AC";
+const ACCENT = "#CBB47B";
+const BG = "#FAFAFA";
+const BG_SOFT = "#E7EBEE";
+const DARK = "#1E262B";
+
+const LEISTUNGEN = [
+  { href: "/verlassenschaften-baden", label: "Verlassenschaften Baden", image: "/images/leistungen/verlassenschaften.webp", excerpt: "Einfühlsam & strukturiert – inklusive fairer Wertanrechnung geeigneter Stücke." },
+  { href: "/firmenaufloesung-baden", label: "Firmenauflösung Baden", image: "/images/leistungen/firmenaufloesung.webp", excerpt: "Planbare Räumung von Büro- und Betriebsflächen – diskret und termintreu." },
+  { href: "/raeumung-baden", label: "Räumung Baden", image: "/images/leistungen/raeumung.webp", excerpt: "Wohnung, Haus oder Teilbereiche – klarer Ablauf bis zur besenreinen Übergabe." },
+  { href: "/entruempelungsfirma-baden", label: "Entrümpelungsfirma Baden", image: "/images/leistungen/entruempelungsfirma.webp", excerpt: "Erfahrene Teams, fixe Zeitfenster, saubere Durchführung in Baden & Umgebung." },
+  { href: "/kellerentruempelung-baden", label: "Kellerentrümpelung Baden", image: "/images/leistungen/keller.webp", excerpt: "Mehr Platz im Untergeschoss – übersichtlich geplant, zügig umgesetzt." },
+  { href: "/dachboden-raeumung-baden", label: "Dachboden Räumung Baden", image: "/images/leistungen/dachboden.webp", excerpt: "Sicheres Arbeiten – auch in engen Bereichen, mit klarer Abnahme." },
+];
+
+function AccentButton({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-4"
+      style={{
+        color: "white",
+        background: `linear-gradient(${ACCENT},${ACCENT}) padding-box,linear-gradient(135deg,${ACCENT},#e6cf96) border-box`,
+        border: `1px solid ${ACCENT}`,
+        boxShadow: "0 8px 24px rgba(203,180,123,.35)",
+      }}
+    >
+      {children}
+    </a>
+  );
+}
+
+function GhostButton({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition hover:bg-white/70 focus:outline-none focus:ring-4"
+      style={{ border: `1px solid ${SECONDARY}66`, color: PRIMARY, background: "white" }}
+    >
+      {children}
+    </a>
+  );
+}
 
 export default function LeistungenPage() {
   return (
-    <main id="main" style={{ background: WHITE, color: BLACK }}>
+    <main id="main" style={{ background: BG, color: PRIMARY }}>
       {/* HERO */}
-      <section
-        className="relative"
-        aria-label="Leistungen in Wien"
-      >
-        <div className="mx-auto w-full max-w-[1150px] px-4 py-14 md:py-20">
-          <div className="text-center max-w-3xl mx-auto">
+      <section aria-label="Leistungen in Baden" className="relative overflow-hidden">
+        <div className="relative mx-auto w-full max-w-[1150px] px-4 py-14 md:py-20 grid md:grid-cols-2 gap-8 items-center">
+          <div>
             <span
               className="inline-flex items-center rounded-full px-3 py-1 text-xs md:text-sm"
-              style={{
-                background: "#fff",
-                color: BRAND,
-                border: `1px solid ${GRAY_BR}`,
-              }}
+              style={{ background: "#fff", color: PRIMARY, border: `1px solid ${SECONDARY}66` }}
             >
-              Wien • unverbindliche Besichtigung
+              Baden • unverbindliche Besichtigung
             </span>
 
-            <h1
-              className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight"
-              style={{ color: BLACK }}
-            >
-              Leistungen in Wien – Entrümpelung, Räumungen &amp; Verlassenschaften
+            <h1 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight" style={{ color: DARK }}>
+              Leistungen in Baden – Entrümpelung, Räumungen &amp; Verlassenschaften
             </h1>
 
-            <p
-              className="mt-4 text-base md:text-lg leading-relaxed"
-              style={{ color: GRAY_TXT }}
-            >
-              Präzise geplant, diskret umgesetzt und klar dokumentiert:
-              Wir unterstützen Sie bei <strong>Entrümpelungen</strong>,{" "}
-              <strong>Wohnungs- und Hausräumungen</strong> sowie{" "}
-              <strong>Verlassenschaften</strong> in allen Bezirken Wiens.
-              Vor dem Termin erhalten Sie eine transparente Bestätigung mit Fixzeitfenster
-              und Umfang – ohne Überraschungen.
+            <p className="mt-4 text-base md:text-lg leading-relaxed" style={{ color: "#334049" }}>
+              Planbar, diskret und persönlich: Wir begleiten Sie in Baden & Umgebung bei <strong>Entrümpelungen</strong>,
+              <strong> Räumungen</strong> von Wohnung und Haus sowie <strong>Verlassenschaften</strong>. Sie erhalten feste
+              Zeitfenster, klare Bestätigungen und eine verlässliche Abwicklung – ohne Umwege.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              {/* Акцентная кнопка */}
-              <Link
-                href="mailto:info@raumfrei-wien.at?subject=Anfrage%20Raumfrei%20Wien"
-                className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-semibold shadow-sm transition hover:opacity-90"
-                style={{
-                  background: BRAND,
-                  color: "#fff",
-                  boxShadow: "0 4px 10px rgba(217,117,0,0.25)",
-                }}
-              >
-                Besichtigung anfragen
-              </Link>
-
-              {/* Вторая кнопка — нейтральная */}
-              <Link
-                href="/ueber-uns"
-                className="inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-medium border transition hover:bg-gray-50"
-                style={{
-                  borderColor: GRAY_BR,
-                  color: BLACK,
-                  background: "#fff",
-                }}
-              >
-                Mehr über uns
-              </Link>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <AccentButton href="https://wa.me/436767202623">WhatsApp – Besichtigung anfragen</AccentButton>
+              <GhostButton href="tel:+436767202623">Jetzt anrufen</GhostButton>
+              <GhostButton href="mailto:info@badenentruempelung.at?subject=Anfrage%20Leistungen%20Baden">E‑Mail senden</GhostButton>
             </div>
+          </div>
+
+          {/* HERO IMAGE */}
+          <div className="hidden md:block">
+            <Image
+              src="/images/hero-leistungen-baden.webp"
+              alt="Entrümpelung Baden – Leistungen Übersicht"
+              width={600}
+              height={400}
+              className="rounded-3xl shadow-lg object-cover"
+            />
           </div>
         </div>
       </section>
 
-      {/* CONTENT WRAPPER */}
-      <section className="mx-auto w-full max-w-[1150px] px-4 pb-16 md:pb-20">
-        {/* разделительная линия (акцентная, тонкая) */}
-        <div className="my-8 h-px w-full" style={{ background: `${BRAND}55` }} />
-
-        {/* Дополнительный вводный SEO-блок с h2/h3 */}
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold" style={{ color: BLACK }}>
-            Entrümpelung &amp; Räumung in Wien – unsere Leistungen
-          </h2>
-          <h3 className="mt-3 text-lg font-semibold" style={{ color: BLACK }}>
-            Wie wir vorgehen
-          </h3>
-          <p
-            className="mt-2 text-base md:text-lg leading-relaxed"
-            style={{ color: GRAY_TXT }}
-          >
-            Jede Adresse ist anders. Damit Ihr Tag planbar bleibt, arbeiten wir mit
-            klaren Zeitfenstern, einer festen Ansprechperson und einem strukturierten Ablauf.
-            Auf Wunsch übernehmen wir die Schlüsselübergabe und halten Sie während des Termins
-            kurz am Laufenden. Die Übergabe erfolgt sauber und pünktlich – mit schriftlicher Bestätigung.
-          </p>
-        </div>
-
-        {/* разделительная линия */}
-        <div className="my-8 h-px w-full" style={{ background: `${GRAY_BR}` }} />
-
-        {/* Сетка услуг (ваш компонент) */}
-        <Leistungen />
-
-        {/* дополнительный SEO-текст (уникальный) */}
-        <div
-          className="mt-12 max-w-3xl mx-auto text-base md:text-lg leading-relaxed"
-          style={{ color: GRAY_TXT }}
-        >
-          <p className="mb-6">
-            Ob komplette Räumung, gezielte Teilbereiche oder die Vorbereitung einer
-            <strong> Verlassenschaft</strong>: Wir stimmen die Schritte transparent ab, halten
-            Zusagen ein und dokumentieren die Übergabe nachvollziehbar. So behalten Sie jederzeit
-            den Überblick – vom ersten Anruf bis zum Abschluss.
-          </p>
-          <p>
-            Sie möchten kurzfristig einen Termin in Wien? Schreiben Sie uns an{" "}
-            <a className="underline" href="mailto:info@raumfrei-wien.at">info@raumfrei-wien.at</a>{" "}
-            oder rufen Sie direkt an:{" "}
-            <a className="underline" href="tel:+436765055437">+43&nbsp;676&nbsp;505&nbsp;54&nbsp;37</a>.
-          </p>
+      {/* SERVICES */}
+      <section className="relative mx-auto w-full max-w-[1150px] px-4 pb-20">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {LEISTUNGEN.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="group block overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-lg bg-white"
+              style={{ borderColor: `${SECONDARY}55` }}
+            >
+              <div className="relative w-full h-52 overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: PRIMARY }}>
+                  {item.label}
+                </h3>
+                <p className="text-[15px] leading-relaxed" style={{ color: "#334049" }}>
+                  {item.excerpt}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
-
-      {/* Breadcrumb JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Startseite",
-                item: "https://raumfrei-wien.at/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Leistungen",
-                item: "https://raumfrei-wien.at/leistungen",
-              },
-            ],
-          }),
-        }}
-      />
-    
-
-{/* EXPERTEN TIPPS */}
+      {/* ===== SEO-TEXT SEKTION ===== */}
 <section
-  className="mx-auto w-full max-w-[1150px] px-4 pb-20"
-  aria-label="Experten Tipps Entrümpelung Wien"
+  className="relative mx-auto w-full max-w-[1150px] px-4 pb-24"
+  aria-label="Entrümpelung, Räumungen & Verlassenschaften Baden – SEO Text"
 >
-  <div
-    className="rounded-3xl border bg-white p-6 md:p-8 shadow-sm"
-    style={{ borderColor: GRAY_BR }}
-  >
-    <h2
-      className="text-2xl md:text-3xl font-extrabold mb-4"
-      style={{ color: BLACK }}
-    >
-      Experten Tipps zur Entrümpelung in Wien
+  <div className="max-w-6xl mx-auto text-base md:text-lg leading-relaxed" style={{ color: "#334049" }}>
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ color: "#2B3A42" }}>
+      Entrümpelung in Baden – professionell, diskret & termintreu
     </h2>
 
-    <h3 className="text-lg font-semibold mb-2" style={{ color: BLACK }}>
-      Planung ist entscheidend
-    </h3>
-    <p className="text-base leading-relaxed mb-5" style={{ color: GRAY_TXT }}>
-      Eine gute Vorbereitung spart Zeit und Kosten. Erstellen Sie vorab eine kurze Übersicht über Räume,
-      Zugänge und Besonderheiten Ihrer Wohnung oder Ihres Hauses. So kann unser Team den Ablauf
-      präzise planen und das richtige Fahrzeug sowie die passende Teamgröße einteilen.
+    <p className="mb-5">
+      Eine <strong>Entrümpelung in Baden</strong> sollte nicht nur schnell, sondern auch gut organisiert sein.
+      Unser Team steht für präzise Planung, klare Kommunikation und eine Umsetzung ohne Stress.
+      Ob Wohnung, Einfamilienhaus oder Geschäftsräume – wir kümmern uns darum, dass alles reibungslos abläuft.
     </p>
 
-    <h3 className="text-lg font-semibold mb-2" style={{ color: BLACK }}>
-      Wertvolles erkennen und ansprechen
+    <h3 className="text-lg font-semibold mb-2" style={{ color: "#2B3A42" }}>
+      Ihre Vorteile mit Baden Entrümpelung
     </h3>
-    <p className="text-base leading-relaxed mb-5" style={{ color: GRAY_TXT }}>
-      Häufig finden sich in Kellern oder Dachböden Gegenstände, die sich noch verwerten oder weitergeben lassen.
-      Unsere Fachleute erkennen solche Stücke rasch und beraten Sie offen, welche Optionen es gibt –
-      ob Weitergabe, Ankauf oder Schätzung.
+    <p className="mb-5">
+      Von der kostenlosen Besichtigung bis zur sauberen Übergabe übernehmen wir sämtliche Schritte für Sie.
+      Fixtermine, ein fester Ansprechpartner und transparente Preise sorgen dafür, dass Sie jederzeit den Überblick behalten.
+      Besonders geschätzt wird unsere ruhige, respektvolle Arbeitsweise – auch in bewohnten Häusern oder sensiblen Situationen.
     </p>
 
-    <h3 className="text-lg font-semibold mb-2" style={{ color: BLACK }}>
-      Diskrete Durchführung
-    </h3>
-    <p className="text-base leading-relaxed mb-5" style={{ color: GRAY_TXT }}>
-      Besonders in Mehrparteienhäusern ist Rücksicht wichtig. Wir arbeiten ruhig, respektvoll und mit klaren
-      Zeitfenstern, damit Nachbarn und Hausgemeinschaft so wenig wie möglich beeinträchtigt werden.
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-4 mt-8" style={{ color: "#2B3A42" }}>
+      Räumung in Baden – Wohnung, Haus oder Gewerbeobjekt
+    </h2>
+    <p className="mb-5">
+      Ob private oder gewerbliche Räumung – wir passen uns dem Objekt und Ihren Wünschen an.
+      Unser eingespieltes Team arbeitet effizient, achtet auf Ihre Immobilie und hinterlässt alle Räume in einem klaren, gepflegten Zustand.
+      Nach Abschluss erhalten Sie eine schriftliche Übergabebestätigung.
     </p>
 
-    <h3 className="text-lg font-semibold mb-2" style={{ color: BLACK }}>
-      Nachbesichtigung und Übergabe
+    <h3 className="text-lg font-semibold mb-2" style={{ color: "#2B3A42" }}>
+      Individuelle Planung für jede Objektgröße
     </h3>
-    <p className="text-base leading-relaxed" style={{ color: GRAY_TXT }}>
-      Nach Abschluss prüfen wir die Flächen gemeinsam mit Ihnen. Alle Bereiche werden klar übergeben,
-      sodass Sie sich auf den nächsten Schritt konzentrieren können – ob Renovierung, Übergabe oder Verkauf.
+    <p className="mb-5">
+      Jede Räumung wird individuell vorbereitet: Wir prüfen Zugänge, Parkmöglichkeiten und die ideale Teamgröße.
+      So läuft der Einsatz vor Ort zügig und kontrolliert – ob kleine Wohnung oder großes Firmenareal.
+    </p>
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-4 mt-8" style={{ color: "#2B3A42" }}>
+      Verlassenschaften Baden – respektvoll & mit Wertanrechnung
+    </h2>
+    <p className="mb-5">
+      Der Umgang mit einer <strong>Verlassenschaft</strong> erfordert Erfahrung und Einfühlungsvermögen.
+      Wir unterstützen Sie bei der kompletten Abwicklung – von der ersten Sichtung bis zur Übergabe.
+      Wertvolle Gegenstände werden transparent bewertet und können auf Wunsch in die Gesamtkosten angerechnet werden.
+    </p>
+
+    <h3 className="text-lg font-semibold mb-2" style={{ color: "#2B3A42" }}>
+      Faire Bewertung & Ankauf vor Ort
+    </h3>
+    <p className="mb-5">
+      Unsere Experten erkennen den tatsächlichen Wert von Antiquitäten, Schmuck, Sammlungen oder Möbeln.
+      Durch die direkte Wertanrechnung sparen Sie Kosten und schaffen Platz für Neues – ohne zusätzliche Wege.
+    </p>
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-4 mt-8" style={{ color: "#2B3A42" }}>
+      Komplettservice für Baden & Umgebung
+    </h2>
+    <p className="mb-5">
+      Ob Sie in Baden selbst, in Pfaffstätten, Traiskirchen, Sooss oder Guntramsdorf wohnen –
+      unser Team ist im gesamten Bezirk aktiv und schnell vor Ort.
+      Durch kurze Wege, lokale Erfahrung und eingespielte Abläufe profitieren Sie von einer professionellen Abwicklung ohne Verzögerungen.
+    </p>
+
+    <h3 className="text-lg font-semibold mb-2" style={{ color: "#2B3A42" }}>
+      Kostenlose Besichtigung & persönlicher Ansprechpartner
+    </h3>
+    <p className="mb-5">
+      Eine kostenlose Besichtigung schafft Klarheit: Wir begutachten das Objekt, besprechen Details und erstellen ein faires Angebot.
+      Während des gesamten Ablaufs begleitet Sie ein fixer Ansprechpartner – von der Planung bis zur Endübergabe.
+    </p>
+
+    <h2 className="text-2xl md:text-3xl font-extrabold mb-4 mt-8" style={{ color: "#2B3A42" }}>
+      Jetzt Termin sichern – schnell & unverbindlich
+    </h2>
+    <p>
+      Vereinbaren Sie gleich einen Besichtigungstermin: telefonisch unter{" "}
+      <a className="underline" href="tel:+436767202623">+43&nbsp;676&nbsp;720&nbsp;26&nbsp;23</a>,
+      per WhatsApp unter{" "}
+      <a className="underline" href="https://wa.me/436767202623">wa.me/436767202623</a>{" "}
+      oder per E-Mail an{" "}
+      <a className="underline" href="mailto:info@badenentruempelung.at">info@badenentruempelung.at</a>.
+      Baden Entrümpelung steht für Planungssicherheit, saubere Arbeit und persönlichen Kontakt –
+      damit Ihre Räumung oder Verlassenschaft stressfrei verläuft.
     </p>
   </div>
 </section>
-</main>
+{/* ===== /SEO-TEXT SEKTION ENDE ===== */}
+
+    </main>
   );
 }

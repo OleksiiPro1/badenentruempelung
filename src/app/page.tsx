@@ -10,6 +10,52 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+
+   const ortsteileBaden = [
+    {
+      plz: "2500",
+      name: "Baden",
+      label: "Innenstadt, Kurviertel & Casino-Nähe",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Braiten",
+      label: "Ruhige Wohnlage südlich von Baden",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Gamingerhof",
+      label: "Grüner Stadtrand mit viel Natur",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Leesdorf",
+      label: "Wohn- & Geschäftsbereich nahe Zentrum",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Mitterberg",
+      label: "Hanglage mit Blick über Baden",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Rauhenstein",
+      label: "Helenental, Burgruine & Villenviertel",
+      href: "/",
+    },
+    {
+      plz: "2500",
+      name: "Weikersdorf",
+      label: "Westlicher Stadtteil mit guter Anbindung",
+      href: "/",
+    },
+  ];
+
   return (
     <>
       {/* ===== HERO: Entrümpelung Baden vom Profi ===== */}
@@ -52,10 +98,10 @@ export default function HomePage() {
                 WhatsApp Kontakt
               </Link>
               <Link
-                href="tel:+436767202623"
+                href="/bewertungen"
                 className="rounded-xl border border-white/40 px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#2B3A42]"
               >
-                Jetzt anrufen
+                Bewertungen
               </Link>
             </div>
 
@@ -534,6 +580,105 @@ export default function HomePage() {
   {/* Dekor unten */}
   <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
 </section>
+
+      {/* ===== SEKTION X: Entrümpelung 2500 Baden – Stadtteile & Ortsteile ===== */}
+      <section
+        id="stadtteile-baden"
+        className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+        aria-label="Entrümpelung 2500 Baden – Stadtteile & Ortsteile"
+      >
+        {/* Декор фона */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          aria-hidden="true"
+          style={{
+            backgroundImage: `
+              radial-gradient(60rem 30rem at 0% 10%, #E7EBEE55 0%, transparent 60%),
+              radial-gradient(60rem 30rem at 100% 90%, #E7EBEE33 0%, transparent 60%)
+            `,
+          }}
+        />
+
+        <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+          <header className="mb-8 md:mb-10">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+              Entrümpelung 2500 Baden – Stadtteile & Katastralgemeinden
+            </h2>
+            <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+              Wir sind in ganz <strong>Baden (PLZ 2500)</strong> für Sie unterwegs – von der
+              Innenstadt bis zu den ruhigen Ortsteilen. Wählen Sie Ihren Bereich: In Kürze
+              entstehen hier eigene Infoseiten mit Details zur Entrümpelung vor Ort.
+            </p>
+          </header>
+
+          {/* Сетка районов */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {ortsteileBaden.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="group flex flex-col justify-between rounded-2xl border border-[#E8E1D9] bg-white p-5 shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-shadow hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
+              >
+                <div>
+                  {/* PLZ + Name */}
+                  <div className="flex items-center gap-2 text-xs font-medium text-[#6B7280]">
+                    <span className="inline-flex items-center rounded-full bg-[#F7F5F2] px-3 py-1">
+                      PLZ {item.plz}
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-[#E8E1D9] bg-white px-3 py-1">
+                      Ortsteil Baden
+                    </span>
+                  </div>
+
+                  <h3 className="mt-3 text-xl font-semibold text-[#2B3A42]">
+                    {item.plz} {item.name}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">
+                    {item.label}
+                  </p>
+                </div>
+
+                {/* „Link“-Stрока снизу */}
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-sm font-semibold text-[#2B3A42]">
+                    Entrümpelung {item.name}
+                  </span>
+                  <span
+                    className="ml-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#E8E1D9] text-xs text-[#2B3A42] transition group-hover:border-[#CBB47B] group-hover:text-[#CBB47B]"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Microcopy + CTA */}
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <span className="text-sm text-[#6B7280]">
+              Ihr Ortsteil ist dabei – wir kommen direkt zu Ihnen nach Baden & Umgebung.
+            </span>
+            <a
+              href="https://wa.me/436767202623"
+              className="ml-auto rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+            >
+              WhatsApp – kostenlose Besichtigung
+            </a>
+            <a
+              href="tel:+436767202623"
+              className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+            >
+              Direkt anrufen
+            </a>
+          </div>
+        </div>
+
+        {/* мягкий низ */}
+        <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+      </section>
+
+
 {/* ===== SEKTION 6: Ablauf Entrümpelung Baden ===== */}
 <section
   id="ablauf-baden"

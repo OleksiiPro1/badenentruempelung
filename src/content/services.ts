@@ -1,4 +1,4 @@
-// src/content/services.ts
+// src/content/services.ts — Baden Entrümpelung
 export type Service = {
   slug: string;
   image?: string;
@@ -12,70 +12,69 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "verlassenschaften-wien",
-    image: "/images/verlassenschaften-wien.webp",
+    slug: "verlassenschaften-baden",
+    image: "/images/verlassenschaften-baden.webp",
     width: 1200,
     height: 800,
-    alt: "Verlassenschaften Wien – respektvolle Abwicklung mit klaren Abläufen",
-    title: "Verlassenschaften Wien",
-    date: "2025-10-01",
+    alt: "Verlassenschaften Baden – respektvolle Abwicklung und faire Wertanrechnung",
+    title: "Verlassenschaften Baden",
+    date: "2025-11-01",
     excerpt:
-      "Verlassenschaften in Wien werden bei uns mit Ruhe und Klarheit durchgeführt – von der ersten Besichtigung bis zur besenreinen Übergabe. Auf Wunsch mit Bewertung und Ankauf erhaltenswerter Stücke.",
+      "Verlassenschaften in Baden werden von uns behutsam und klar strukturiert abgewickelt – von der ersten Besichtigung bis zur sauberen Übergabe. Auf Wunsch mit Bewertung und fairer Wertanrechnung erhaltenswerter Stücke.",
   },
   {
-    slug: "firmenaufloesung-wien",
-    image: "/images/firmenaufloesung-wien.webp",
+    slug: "firmenaufloesung-baden",
+    image: "/images/firmenaufloesung-baden.webp",
     width: 1200,
     height: 800,
-    alt: "Firmenauflösung Wien – termingerecht, strukturiert und diskret",
-    title: "Firmenauflösung Wien",
-    date: "2025-10-02",
+    alt: "Firmenauflösung Baden – termintreu, strukturiert und diskret",
+    title: "Firmenauflösung Baden",
+    date: "2025-11-02",
     excerpt:
-      "Ob Büro, Werkstatt oder Geschäftslokal – wir übernehmen die komplette Firmenauflösung in Wien mit klaren Zeitfenstern, strukturierter Durchführung und diskreter Abstimmung.",
-  },
-
-  {
-    slug: "raeumung-wien",
-    image: "/images/raeumung-wien.webp",
-    width: 1200,
-    height: 800,
-    alt: "Räumung Wien – schnell, diskret und professionell",
-    title: "Räumung Wien",
-    date: "2025-10-05",
-    excerpt:
-      "Räumungen in Wien mit klaren Zusagen: wir arbeiten termintreu, strukturiert und verlässlich. Ideal für Wohnungen, Häuser, Keller oder Gewerbeobjekte.",
+      "Ob Büro, Lager oder Geschäftslokal – wir übernehmen die komplette Firmenauflösung in Baden. Mit festen Zeitfenstern, klarer Koordination und einer diskreten, planbaren Durchführung.",
   },
   {
-    slug: "entruempelungsfirma-wien",
-    image: "/images/entruempelungsfirma-wien.webp",
+    slug: "raeumung-baden",
+    image: "/images/raeumung-baden.webp",
     width: 1200,
     height: 800,
-    alt: "Entrümpelungsfirma Wien – erfahren, regional und flexibel",
-    title: "Entrümpelungsfirma Wien",
-    date: "2025-10-06",
+    alt: "Räumung Baden – zuverlässig und professionell",
+    title: "Räumung Baden",
+    date: "2025-11-03",
     excerpt:
-      "Als erfahrene Entrümpelungsfirma in Wien bieten wir schnelle Termine, klare Preise und eine ruhige Abwicklung – vom Dachboden bis zur kompletten Wohnungsräumung.",
+      "Räumungen in Baden mit klarer Struktur und verlässlichen Zusagen. Unser Team arbeitet ruhig, sauber und termingerecht – ideal für Wohnungen, Häuser und gewerbliche Flächen.",
   },
   {
-    slug: "kellerentruempelung-wien",
-    image: "/images/kellerentruempelung-wien.webp",
+    slug: "entruempelungsfirma-baden",
+    image: "/images/entruempelungsfirma-baden.webp",
     width: 1200,
     height: 800,
-    alt: "Kellerentrümpelung Wien – rasch und planbar",
-    title: "Kellerentrümpelung Wien",
-    date: "2025-10-07",
+    alt: "Entrümpelungsfirma Baden – erfahren, lokal und flexibel",
+    title: "Entrümpelungsfirma Baden",
+    date: "2025-11-04",
     excerpt:
-      "Kellerentrümpelung in Wien: Zugänge klären, Bereiche sichern und zügig freimachen. Wir sorgen für klare Wege und saubere Ergebnisse – pünktlich und unkompliziert.",
+      "Als regionale Entrümpelungsfirma in Baden bieten wir klare Abläufe, transparente Preise und schnelle Termine. Vom Dachboden bis zum Keller – diskret, sauber und pünktlich.",
   },
   {
-    slug: "dachboden-raeumung-wien",
-    image: "/images/dachboden-raeumung-wien.webp",
+    slug: "kellerentruempelung-baden",
+    image: "/images/kellerentruempelung-baden.webp",
     width: 1200,
     height: 800,
-    alt: "Dachboden Räumung Wien – zuverlässig und sorgfältig",
-    title: "Dachboden Räumung Wien",
-    date: "2025-10-08",
+    alt: "Kellerentrümpelung Baden – schnell und übersichtlich",
+    title: "Kellerentrümpelung Baden",
+    date: "2025-11-05",
     excerpt:
-      "Dachboden Räumung in Wien mit Fixtermin: wir planen Wege und Zugänge vorab, arbeiten behutsam und hinterlassen die Fläche geordnet und sauber.",
+      "Mehr Platz im Keller: Wir planen die Zugänge, stimmen den Ablauf ab und führen die Kellerentrümpelung in Baden effizient durch – inklusive fixer Übergabe.",
+  },
+  {
+    slug: "dachboden-raeumung-baden",
+    image: "/images/dachboden-raeumung-baden.webp",
+    width: 1200,
+    height: 800,
+    alt: "Dachboden Räumung Baden – sorgfältig und planbar",
+    title: "Dachboden Räumung Baden",
+    date: "2025-11-06",
+    excerpt:
+      "Dachboden Räumung in Baden mit klarer Planung: wir prüfen Zugänge, organisieren sichere Abläufe und übergeben die Fläche geordnet und besenrein.",
   },
 ];
