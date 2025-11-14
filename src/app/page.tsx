@@ -205,7 +205,7 @@ export default function HomePage() {
       </h2>
       <p className="mt-3 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
         Ein klar strukturiertes Projekt mit schneller Umsetzung und besenreiner Übergabe.
-        Fixpreis nach Besichtigung, termintreue Durchführung und respektvolle Abwicklung vor Ort.
+        Fixpreis nach Besichtigung, termintreue Durchführung und respektvolle Abwicklung vor Ort. Entrümpelung Baden vom Profi.
       </p>
     </header>
 
