@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Entrümpelung Baden – Schnell, Diskret & Professionell vom Experten",
+  title: "Entrümpelung Baden – Professionell vom Experten",
   description:
     "Entrümpelung Baden mit kostenloser Besichtigung & Fixpreis. Zuverlässige Räumung, Wertanrechnung & Ankauf in Baden & Umgebung – jetzt Termin sichern.",
 };
@@ -84,7 +84,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-6 text-base md:text-lg text-[#F5F5F5] leading-relaxed">
-              Baden Entrümpelung steht für Professionalität, Diskretion und Effizienz.
+              Entrümpelung Baden steht für Professionalität, Diskretion und Effizienz.
               Unser erfahrenes Team kümmert sich um jede Art von Entrümpelung in Baden
               und Umgebung – schnell, sauber und mit höchster Sorgfalt. Wir bieten faire
               Preise, transparente Abläufe und eine kostenlose Besichtigung vor Ort.
@@ -123,11 +123,11 @@ export default function HomePage() {
       >
         <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-[#3A2E25] mb-6">
-            Entrümpelung Baden – Ankauf & Verwertung
+            Ankauf & Verwertung
           </h2>
 
           <p className="text-lg leading-relaxed text-[#4B3C30] max-w-[820px]">
-            Bei <strong>Baden Entrümpelung</strong> erhalten Sie mehr als nur eine Räumung.
+            Bei <strong>Entrümpelung Baden</strong> erhalten Sie mehr als nur eine Räumung.
             Wir bieten zusätzlich die Möglichkeit zum Ankauf und zur Verwertung von
             wertvollen Gegenständen – sei es Antiquitäten, Möbel, Gemälde, Sammlungen
             oder Schmuck. So reduzieren sich die Gesamtkosten Ihrer Entrümpelung deutlich
@@ -445,7 +445,7 @@ export default function HomePage() {
   <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
     <header className="mb-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
-        Entrümpelung Baden Kosten
+        Entrümpelung Kosten
       </h2>
       <p className="mt-4 max-w-[820px] text-[17px] leading-relaxed text-[#4B3C30]">
         Faire Preise mit transparenter Kalkulation: Bei Baden Entrümpelung erhalten Sie 
@@ -630,9 +630,9 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <h3 className="mt-3 text-xl font-semibold text-[#2B3A42]">
+                  <p><b className="mt-3 text-xl font-semibold text-[#2B3A42]">
                     {item.plz} {item.name}
-                  </h3>
+                  </b></p>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">
                     {item.label}
                   </p>
@@ -1389,7 +1389,7 @@ export default function HomePage() {
               <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z"/>
             </svg>
           </div>
-          <h3 className="text-[18px] font-semibold text-[#2B3A42]">{item.title}</h3>
+          <p><b className="text-[18px] font-semibold text-[#2B3A42]">{item.title}</b></p>
           <p className="mt-2 text-[15px] leading-relaxed text-[#4B3C30]">{item.text}</p>
         </div>
       ))}
