@@ -389,13 +389,7 @@ export default function HomePage() {
           href: "/verlassenschaften-baden",
           text:
             "Einfühlsam und zuverlässig – inklusive Wertanrechnung bei geeigneten Stücken.",
-        },
-        {
-          title: "Messie Hilfe Baden",
-          href: "/entruempelungsfirma-baden",
-          text:
-            "Respektvoll, strukturiert und mit klarer Vorgehensweise – vertraulich abgewickelt.",
-        },
+        }
       ].map((item) => (
         <a
           key={item.title}
@@ -505,6 +499,128 @@ export default function HomePage() {
 
   {/* Декоративная линия */}
   <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FDFBF9] to-transparent" />
+</section>
+
+{/* ===== SEKTION: Zusätzliche Leistungen, Ratgeber & Artikel (1 Accordion) ===== */}
+<section
+  id="zusatz"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+  aria-label="Zusätzliche Leistungen, Ratgeber und Artikel"
+>
+  <div className="mx-auto w-full max-w-[1150px] px-6 md:px-10">
+    <header className="mb-8">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Zusätzliche Leistungen, Ratgeber & Artikel
+      </h2>
+      <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Hier finden Sie alle ergänzenden Leistungen sowie hilfreiche Inhalte zum Nachlesen –
+        kompakt an einem Ort. Öffnen Sie den Bereich und wählen Sie das Thema, das zu Ihrer
+        Situation passt.
+      </p>
+    </header>
+
+    {(() => {
+      const items: {
+        title: string;
+        href: string;
+        label?: string; // z.B. "Zusatzleistung" | "Artikel"
+        tag?: string;   // z.B. "Nachlass" | "Messie" | "Entrümpelung"
+      }[] = [
+        // ✅ Beispiele (du erweiterst die Liste beliebig)
+        { title: "Nachlass verkaufen Baden", href: "/nachlass-verkaufen", label: "Artikel", tag: "Nachlass" },
+        { title: "Nachlassauflösung Baden", href: "/nachlassaufloesung-baden", label: "Artikel", tag: "Nachlass" },
+
+        // { title: "Express-Termin", href: "/express-termin", label: "Zusatzleistung", tag: "Service" },
+        // { title: "Wochenend-Termine", href: "/wochenend-termin", label: "Zusatzleistung", tag: "Service" },
+      ];
+
+      return (
+        <details className="group rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+            <div>
+              <h3 className="text-xl md:text-2xl font-semibold text-[#2B3A42]">
+                Alle Inhalte öffnen
+              </h3>
+              <p className="mt-2 text-[15px] text-[#334049]">
+                Aktuell: <span className="font-semibold">{items.length}</span> Einträge
+              </p>
+            </div>
+
+            <span className="inline-grid h-10 w-10 place-items-center rounded-full border border-[#A7A9AC66] text-[#2B3A42] transition group-open:rotate-45">
+              +
+            </span>
+          </summary>
+
+          <div className="mt-6">
+            {/* Optional: Tags */}
+            <div className="mb-5 flex flex-wrap gap-2">
+              {Array.from(new Set(items.map((x) => x.tag).filter(Boolean))).map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-[#E8E1D9] bg-[#F7F5F2] px-3 py-1 text-xs font-medium text-[#2B3A42]"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            {/* List */}
+            <div className="grid gap-3 md:grid-cols-2">
+              {items.map((x) => (
+                <a
+                  key={x.href}
+                  href={x.href}
+                  className="group/link rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      {/* Анкор = заголовок */}
+                      <p className="text-[16px] font-semibold text-[#2B3A42] group-hover/link:text-[#CBB47B] transition">
+                        {x.title}
+                      </p>
+
+                      {(x.label || x.tag) ? (
+                        <p className="mt-1 text-xs text-[#6B7280]">
+                          {x.label ? x.label : null}
+                          {x.label && x.tag ? " • " : null}
+                          {x.tag ? x.tag : null}
+                        </p>
+                      ) : null}
+                    </div>
+
+                    <span
+                      className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#E8E1D9] text-xs text-[#2B3A42] transition group-hover/link:border-[#CBB47B] group-hover/link:text-[#CBB47B]"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/436767202623"
+                className="rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+              >
+                WhatsApp – kurz anfragen
+              </a>
+              <a
+                href="tel:+436767202623"
+                className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+              >
+                Direkt anrufen
+              </a>
+            </div>
+          </div>
+        </details>
+      );
+    })()}
+  </div>
+
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
 </section>
 
  
