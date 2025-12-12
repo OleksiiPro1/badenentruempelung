@@ -528,7 +528,7 @@ export default function HomePage() {
       }[] = [
         // ✅ Beispiele (du erweiterst die Liste beliebig)
         { title: "Nachlass verkaufen Baden", href: "/nachlass-verkaufen", label: "Artikel", tag: "Nachlass" },
-        { title: "Nachlassauflösung Baden", href: "/nachlassaufloesung-baden", label: "Artikel", tag: "Nachlass" },
+        { title: "Nachlassauflösung Baden", href: "/nachlassauflosung-baden", label: "Artikel", tag: "Nachlass" },
 
         // { title: "Express-Termin", href: "/express-termin", label: "Zusatzleistung", tag: "Service" },
         // { title: "Wochenend-Termine", href: "/wochenend-termin", label: "Zusatzleistung", tag: "Service" },
