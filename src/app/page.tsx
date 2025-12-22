@@ -12,23 +12,18 @@ export const metadata: Metadata = {
 export default function HomePage() {
 
    const ortsteileBaden = [
-    {
-      plz: "2500",
-      name: "Baden",
-      label: "Innenstadt, Kurviertel & Casino-Nähe",
-      href: "/",
-    },
+    
     {
       plz: "2500",
       name: "Braiten",
       label: "Ruhige Wohnlage südlich von Baden",
-      href: "/",
+      href: "/entruempelung-braiten/",
     },
     {
       plz: "2500",
       name: "Gamingerhof",
       label: "Grüner Stadtrand mit viel Natur",
-      href: "/",
+      href: "/entruempelung-gamingerhof/",
     },
     {
       plz: "2500",

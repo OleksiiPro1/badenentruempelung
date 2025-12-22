@@ -26,8 +26,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Leistungen (6 Services aus deinem /uslugi Ordner) -->
-
+  <!-- Leistungen -->
   <url>
     <loc>https://badenentruempelung.at/dachboden-raeumung-baden</loc>
     <lastmod>2025-11-06</lastmod>
@@ -64,7 +63,7 @@
     <priority>0.9</priority>
   </url>
 
-   <url>
+  <url>
     <loc>https://badenentruempelung.at/nachlass-verkaufen</loc>
     <lastmod>2025-12-12</lastmod>
     <priority>0.9</priority>
@@ -73,6 +72,18 @@
   <url>
     <loc>https://badenentruempelung.at/nachlassaufloesung-baden</loc>
     <lastmod>2025-12-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://badenentruempelung.at/entruempelung-gamingerhof</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://badenentruempelung.at/entruempelung-braiten</loc>
+    <lastmod>2025-12-22</lastmod>
     <priority>0.9</priority>
   </url>
 
