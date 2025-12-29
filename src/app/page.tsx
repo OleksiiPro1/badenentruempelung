@@ -789,6 +789,305 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
       </section>
 
+      {/* ===== SEKTION: Entrümpelung Baden Umgebung – Orte & Gemeinden (Accordion) ===== */}
+<section
+  id="baden-umgebung"
+  className="relative overflow-hidden bg-[#FAFAFA] py-20 md:py-10"
+  aria-label="Entrümpelung Baden Umgebung"
+>
+  {/* Декор фона */}
+  <div
+    className="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style={{
+      backgroundImage: `
+        radial-gradient(60rem 30rem at 0% 10%, #E7EBEE55 0%, transparent 60%),
+        radial-gradient(60rem 30rem at 100% 90%, #E7EBEE33 0%, transparent 60%)
+      `,
+    }}
+  />
+
+  <div className="relative mx-auto w-full max-w-[1180px] px-6 md:px-10">
+    <header className="mb-8 md:mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#2B3A42]">
+        Entrümpelung Baden Umgebung
+      </h2>
+      <p className="mt-4 max-w-[860px] text-[17px] leading-relaxed text-[#334049]">
+        Wir sind nicht nur in Baden 2500 unterwegs, sondern auch in den umliegenden Gemeinden.
+        Öffnen Sie die Bereiche und wählen Sie Ihren Ort – Links werden nach und nach ergänzt.
+      </p>
+    </header>
+
+    <div className="grid gap-4">
+      {/* ===== Bezirk Baden (ohne Baden) ===== */}
+      <details className="group rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#2B3A42]">
+              Bezirk Baden – weitere Gemeinden
+            </h3>
+           
+          </div>
+          <span className="inline-grid h-10 w-10 place-items-center rounded-full border border-[#A7A9AC66] text-[#2B3A42] transition group-open:rotate-45">
+            +
+          </span>
+        </summary>
+
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Alland 2534</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Altenmarkt an der Triesting 2571</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Bad Vöslau 2540</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Berndorf 2560</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Blumau-Neurißhof 2602</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Ebreichsdorf 2483</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Enzesfeld-Lindabrunn 2551</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Furth an der Triesting 2564</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Günselsdorf 2525</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Heiligenkreuz 2532</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Hernstein 2561</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Hirtenberg 2552</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Klausen-Leopoldsdorf 2533</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Kottingbrunn 2542</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Leobersdorf 2544</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Mitterndorf an der Fischa 2441</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Oberwaltersdorf 2522</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Pfaffstätten 2511</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Pottendorf 2486</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Pottenstein 2563</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Reisenberg 2440</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Schönau an der Triesting 2525</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Seibersdorf 2443</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Sooß 2504</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Tattendorf 2523</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Teesdorf 2524</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Traiskirchen 2514</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Trumau 2521</p>
+          </a>
+
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Weissenbach an der Triesting 2564</p>
+          </a>
+        </div>
+      </details>
+
+      {/* ===== Bezirk Mödling ===== */}
+      <details className="group rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#2B3A42]">
+              Bezirk Mödling – Baden Umgebung
+            </h3>
+           
+          </div>
+          <span className="inline-grid h-10 w-10 place-items-center rounded-full border border-[#A7A9AC66] text-[#2B3A42] transition group-open:rotate-45">
+            +
+          </span>
+        </summary>
+
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Achau 2481</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Biedermannsdorf 2362</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Breitenfurt bei Wien 2384</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Brunn am Gebirge 2345</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Gaaden 2531</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Gießhübl 2372</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Gumpoldskirchen 2352</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Guntramsdorf 2353</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Hennersdorf 2332</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Hinterbrühl 2371</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Kaltenleutgeben 2391</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Laab im Walde 2381</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Laxenburg 2361</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Maria Enzersdorf 2344</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Mödling 2340</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Münchendorf 2482</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Perchtoldsdorf 2380</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Vösendorf 2331</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Wiener Neudorf 2351</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Wienerwald 2392</p>
+          </a>
+        </div>
+      </details>
+
+      {/* ===== Weitere Umgebung (optional) ===== */}
+      <details className="group rounded-3xl border border-[#E8E1D9] bg-white p-6 md:p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#2B3A42]">
+              Weitere Umgebung – Richtung Wiener Neustadt
+            </h3>
+            
+          </div>
+          <span className="inline-grid h-10 w-10 place-items-center rounded-full border border-[#A7A9AC66] text-[#2B3A42] transition group-open:rotate-45">
+            +
+          </span>
+        </summary>
+
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Ebenfurth 2490</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Eggendorf 2492</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Felixdorf 2603</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Bad Fischau-Brunn 2721</p>
+          </a>
+          <a href="#" className="rounded-2xl border border-[#E8E1D9] bg-[#FAFAFA] px-5 py-4 transition hover:bg-white hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
+            <p className="text-[16px] font-semibold text-[#2B3A42]">Entrümpelung Wiener Neustadt 2700</p>
+          </a>
+        </div>
+      </details>
+    </div>
+
+    {/* CTA */}
+    <div className="mt-10 flex flex-wrap items-center gap-4">
+      <span className="text-sm text-[#6B7280]">
+        Ihr Ort ist dabei – wir kommen direkt zu Ihnen in Baden & Umgebung.
+      </span>
+      <a
+        href="https://wa.me/436767202623"
+        className="ml-auto rounded-xl bg-[#CBB47B] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110"
+      >
+        WhatsApp – kostenlose Besichtigung
+      </a>
+      <a
+        href="tel:+436767202623"
+        className="rounded-xl border border-[#2B3A42] px-6 py-3 text-sm font-semibold text-[#2B3A42] transition hover:bg-[#2B3A42] hover:text-white"
+      >
+        Direkt anrufen
+      </a>
+    </div>
+  </div>
+
+  <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#FAFAFA] to-transparent" />
+</section>
+
+
 
 {/* ===== SEKTION 6: Ablauf Entrümpelung Baden ===== */}
 <section
