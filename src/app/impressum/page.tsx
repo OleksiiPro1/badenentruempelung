@@ -42,7 +42,7 @@ export default function Impressum() {
 <h2>Kontaktdaten des Verantwortlichen</h2>
 <p>Sollten Sie Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw. Stelle:</p>
 <p>Kontaktdaten:</p>
-<p>X-Trans e.U.<br><span style="background-color: var(--colorLight);">Hasenleitengasse 10.10.1 Wien 1110, Austria</span></p>
+<p>X-Trans e.U.<br><span style="background-color: var(--colorLight);">Lorystraße 40-42 /16 /5 1110 Wien, Austria</span></p>
 <p><span style="background-color: var(--colorLight); color: var(--colorFont);">E-Mail: info@badenentruempelung.at</span><br></p>
 <p>Telefon: +436767202623</p>
 <h2>Speicherdauer</h2>
